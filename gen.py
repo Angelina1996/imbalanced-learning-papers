@@ -85,7 +85,7 @@ for tag, papers in tags.items():
 # Add tag links to readme
 print('Adding tag list to README.md')
 tag_links = []
-for tag in tags.keys():
+for tag in sorted(list(tags.keys())):
     tag_links.append('[%s](%s/%s.md)' % (tag, out_dir[2:], tag))
 # Place it in the README
 tag_links = '<!--PAPERS-OUTPUT-->\n' + ', '.join(tag_links) + '\n<!--/PAPERS-OUTPUT-->'
