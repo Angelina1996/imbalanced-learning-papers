@@ -1,5 +1,5 @@
 
-# Handling imbalanced datasets: A review
+# [Home](../) / Papers / Handling imbalanced datasets: A review
 
 2006
 

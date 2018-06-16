@@ -1,3 +1,3 @@
-# Papers for tag `recognition`:
+# [Home](../) / Tags / `recognition`:
 
 [Learning from imbalanced data sets: a comparison of various strategies](japkowicz2000learning.md)

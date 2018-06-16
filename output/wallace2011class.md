@@ -1,5 +1,5 @@
 
-# Class Imbalance, Redux
+# [Home](../) / Papers / Class Imbalance, Redux
 
 2011
 

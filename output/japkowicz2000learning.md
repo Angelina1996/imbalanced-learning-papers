@@ -1,5 +1,5 @@
 
-# Learning from imbalanced data sets: a comparison of various strategies
+# [Home](../) / Papers / Learning from imbalanced data sets: a comparison of various strategies
 
 2000
 
