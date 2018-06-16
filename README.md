@@ -17,10 +17,12 @@ Papers on imbalanced learning, organized by topic tag.  Some with summaries.
   - [synthetic-data](output/synthetic-data.md)
 <!--/PAPERS-OUTPUT-->
 
+
 ## Contributing
 
-To add a paper:
+Pull requests are welcome.
 
-  1. Add a new YAML file in `yaml/`, adhering to the same format.
-  2. Run `gen.py` to regenerate the output files (you'll need [PyYAML](https://github.com/yaml/pyyaml)).
-  3. Optionally, send a pull request if you think it should be included here.
+To add a paper, add an appropriate YAML file in `yaml/`, adhering to the same format.
+
+Please run `gen.py` to regenerate the output files before submitting
+(you'll need [PyYAML](https://github.com/yaml/pyyaml)).
