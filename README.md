@@ -7,18 +7,12 @@ Papers on imbalanced learning, organized by topic tag.  Some with summaries.
 ## Browse by tag
 
 <!--PAPERS-OUTPUT-->
-### ↳ [classification](output/classification.md)
-
-### ↳ [recognition](output/recognition.md)
-
-### ↳ [review](output/review.md)
-
-### ↳ [subsampling](output/subsampling.md)
-
-### ↳ [synthetic-data](output/synthetic-data.md)
+  - [classification](output/classification.md)
+  - [recognition](output/recognition.md)
+  - [review](output/review.md)
+  - [subsampling](output/subsampling.md)
+  - [synthetic-data](output/synthetic-data.md)
 <!--/PAPERS-OUTPUT-->
-
-----
 
 ## Contributing
 
