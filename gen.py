@@ -61,7 +61,7 @@ for yaml_file in iglob(os.path.join(in_dir, '*.yaml')):
 for paper in papers:
     paper_file = os.path.join(out_dir, '%s.md' % paper.id)
     print('Creating %s' % paper_file)
-    paper_md = '\n# [Home](../) / Papers / %s' % paper.title
+    paper_md = '\n# [Home](../README.md) / Papers / %s' % paper.title
     paper_md += '\n\n' + paper.year
     if len(paper.authors) > 0:
         paper_md += '\n\n' + ''.join(paper.authors)
@@ -76,7 +76,7 @@ for paper in papers:
 for tag, papers in tags.items():
     tag_file = os.path.join(out_dir, '%s.md' % tag)
     print('Creating %s' % tag_file)
-    tag_md = '# [Home](../) / Tags / `%s`:' % tag
+    tag_md = '# [Home](../README.md) / Tags / `%s`:' % tag
     for paper in papers:
         tag_md += '\n\n[%s](%s.md)' % (paper.title, paper.id)
     with open(tag_file, 'w') as f:
