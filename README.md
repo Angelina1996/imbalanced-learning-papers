@@ -13,5 +13,11 @@ To add a paper:
 ## Papers by tag
 
 <!--PAPERS-OUTPUT-->
-[classification](output/classification.md), [recognition](output/recognition.md), [subsampling](output/subsampling.md), [synthetic-data](output/synthetic-data.md)
+### [classification](output/classification.md)
+
+### [recognition](output/recognition.md)
+
+### [subsampling](output/subsampling.md)
+
+### [synthetic-data](output/synthetic-data.md)
 <!--/PAPERS-OUTPUT-->
