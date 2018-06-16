@@ -1,4 +1,4 @@
-[Imbalanced Learning Papers](../README.md)
+# [Imbalanced Learning Papers](../README.md)
 # ↳ Class Imbalance, Redux
 
 2011

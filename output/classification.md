@@ -1,4 +1,4 @@
-[Imbalanced Learning Papers](../README.md)
+# [Imbalanced Learning Papers](../README.md)
 # ↳ Tag: `classification`
 
 ## [Handling imbalanced datasets: A review](kotsiantis2006handling.md)
