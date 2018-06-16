@@ -47,7 +47,6 @@ for yaml_file in iglob('./papers/*.yaml'):
                 if tag not in tags:
                     tags[tag] = []
                 tags[tag].append(paper)
-
         except yaml.YAMLError as e:
             print(e)
 
@@ -77,7 +76,7 @@ for tag, papers in tags.items():
     print('Creating %s' % tag_file)
     tag_md = '# Papers for tag `%s`:' % tag
     for paper in papers:
-        tag_md += '\n\n[%s](%s)' % (paper.title, paper.id)
+        tag_md += '\n\n[%s](%s.md)' % (paper.title, paper.id)
     with open(tag_file, 'w') as f:
         f.write(tag_md)
 
@@ -85,7 +84,7 @@ for tag, papers in tags.items():
 print('Adding tag list to README.md')
 tag_links = []
 for tag in tags.keys():
-    tag_links.append('[%s](%s/%s)' % (tag, out_dir[2:], tag))
+    tag_links.append('[%s](%s/%s.md)' % (tag, out_dir[2:], tag))
 # Place it in the README
 tag_links = '<!--PAPERS-OUTPUT-->\n' + ', '.join(tag_links) + '\n<!--/PAPERS-OUTPUT-->'
 with open('README.md', 'r') as f:
