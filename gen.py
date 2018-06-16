@@ -34,9 +34,9 @@ class Paper:
                 summary[i] = '  ' + summary[i]
             summary = '\n'.join(summary)
             self.summary = summary
-        self.tags = []
+        self._tags = []
         if 'tags' in data and len(data['tags']) > 0:
-            self.tags = data['tags']
+            self._tags = data['tags']
         self.authors = []
         if 'authors' in data and len(data['authors']) > 0:
             self.authors = data['authors']
@@ -55,6 +55,13 @@ class Paper:
             return authors[0]
         else:
             return 'Unknown'
+
+    @property
+    def tags(self):
+        tags = self._tags
+        if self.summary is not None:
+            tags.append('has-summary')
+        return tags
 
 
 if os.path.isdir(out_dir):

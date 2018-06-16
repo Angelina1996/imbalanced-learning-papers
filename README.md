@@ -9,6 +9,7 @@ Papers on imbalanced learning, organized by topic tag.  Some with summaries.
 <!--PAPERS-OUTPUT-->
   - [calibration](output/calibration.md)
   - [classification](output/classification.md)
+  - [has-summary](output/has-summary.md)
   - [neural-networks](output/neural-networks.md)
   - [recognition](output/recognition.md)
   - [regression](output/regression.md)
