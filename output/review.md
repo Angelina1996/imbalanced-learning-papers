@@ -1,6 +1,6 @@
 # [Imbalanced Learning Papers](../README.md)
-# ↳ Tag: `review`
+## ↳ Tag: `review`
 
-## [Class Imbalance, Redux](wallace2011class.md)
+### [Class Imbalance, Redux](wallace2011class.md)
 
 review, classification
