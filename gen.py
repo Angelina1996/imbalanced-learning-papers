@@ -99,7 +99,7 @@ for tag, papers in tags.items():
     tag_file = os.path.join(out_dir, '%s.md' % tag)
     print('Creating %s' % tag_file)
     tag_md = '# [Imbalanced Learning Papers](../README.md)\n## ↳ Tag: `%s`' % tag
-    for paper in papers:
+    for paper in sorted(papers, key=lambda p: p.year):
         tag_md += '\n\n### [%s (%s, %s)](%s.md)\n\n' % (paper.title, paper.author, paper.year, paper.id)
         tag_md += ', '.join(paper.tags)
     with open(tag_file, 'w') as f:
