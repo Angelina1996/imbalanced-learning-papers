@@ -17,6 +17,8 @@ To add a paper:
 
 ### [recognition](output/recognition.md)
 
+### [review](output/review.md)
+
 ### [subsampling](output/subsampling.md)
 
 ### [synthetic-data](output/synthetic-data.md)
