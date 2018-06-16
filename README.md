@@ -7,8 +7,11 @@ Papers on imbalanced learning, organized by topic tag.  Some with summaries.
 ## Browse papers by tag
 
 <!--PAPERS-OUTPUT-->
+  - [calibration](output/calibration.md)
   - [classification](output/classification.md)
+  - [neural-networks](output/neural-networks.md)
   - [recognition](output/recognition.md)
+  - [regression](output/regression.md)
   - [review](output/review.md)
   - [subsampling](output/subsampling.md)
   - [synthetic-data](output/synthetic-data.md)
