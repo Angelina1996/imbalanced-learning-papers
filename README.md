@@ -13,13 +13,13 @@ To add a paper:
 ## Papers by tag
 
 <!--PAPERS-OUTPUT-->
-### [classification](output/classification.md)
+### ↳ [classification](output/classification.md)
 
-### [recognition](output/recognition.md)
+### ↳ [recognition](output/recognition.md)
 
-### [review](output/review.md)
+### ↳ [review](output/review.md)
 
-### [subsampling](output/subsampling.md)
+### ↳ [subsampling](output/subsampling.md)
 
-### [synthetic-data](output/synthetic-data.md)
+### ↳ [synthetic-data](output/synthetic-data.md)
 <!--/PAPERS-OUTPUT-->
