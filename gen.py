@@ -26,6 +26,14 @@ class Paper:
         self.year = None
         if 'year' in data:
             self.year = str(data['year'])
+        self.summary = None
+        if 'summary' in data:
+            summary = str(data['summary'])
+            summary = summary.split('\n')
+            for i, line in enumerate(summary):
+                summary[i] = '  ' + summary[i]
+            summary = '\n'.join(summary)
+            self.summary = summary
         self.tags = []
         if 'tags' in data and len(data['tags']) > 0:
             self.tags = data['tags']
@@ -80,6 +88,9 @@ for paper in papers:
         paper_md += '\n\n### Link(s)\n\n'
         for link in paper.links:
             paper_md += '%s\n' % link
+    if paper.summary is not None:
+        paper_md += '\n\n### Summary\n\n'
+        paper_md += paper.summary
     with open(paper_file, 'w') as f:
         f.write(paper_md)
 
