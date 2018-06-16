@@ -13,5 +13,5 @@ To add a paper:
 ## Papers
 
 <!--PAPERS-OUTPUT-->
-[synthetic-data](output/synthetic-data), [classification](output/classification), [recognition](output/recognition), [subsampling](output/subsampling)
+[classification](output/classification.md), [subsampling](output/subsampling.md), [recognition](output/recognition.md), [synthetic-data](output/synthetic-data.md)
 <!--/PAPERS-OUTPUT-->
