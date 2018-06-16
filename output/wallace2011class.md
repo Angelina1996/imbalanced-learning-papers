@@ -1,5 +1,5 @@
 
-# [Home](../README.md) / Papers / Class Imbalance, Redux
+# [<](../README.md) Class Imbalance, Redux
 
 2011
 

@@ -1,3 +1,3 @@
-# [Home](../README.md) / Tags / `recognition`:
+# [<](../README.md) `recognition`:
 
 [Learning from imbalanced data sets: a comparison of various strategies](japkowicz2000learning.md)

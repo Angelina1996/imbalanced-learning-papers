@@ -1,4 +1,4 @@
-# [Home](../README.md) / Tags / `classification`:
+# [<](../README.md) `classification`:
 
 [Handling imbalanced datasets: A review](kotsiantis2006handling.md)
 
