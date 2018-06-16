@@ -12,7 +12,7 @@ from shutil import rmtree
 from glob import iglob
 import yaml
 
-in_dir = './input'
+in_dir = './yaml'
 out_dir = './output'
 
 

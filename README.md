@@ -18,6 +18,6 @@ Papers on imbalanced learning, organized by topic tag.  Some with summaries.
 
 To add a paper:
 
-  1. Add a new YAML file in `input/`, adhering to the same format.
+  1. Add a new YAML file in `yaml/`, adhering to the same format.
   2. Run `gen.py` to regenerate the output files (you'll need [PyYAML](https://github.com/yaml/pyyaml)).
   3. Optionally, send a pull request if you think it should be included here.
