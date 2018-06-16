@@ -13,19 +13,5 @@ To add a paper:
 ## Papers
 
 <!--PAPERS-OUTPUT-->
-Tags (use CTRL-F to find in page): `classification` `synthetic-data` `subsampling` `recognition` 
-
-
-### Handling imbalanced datasets: A review
-
-Tag(s): `classification` 
-
-Link(s): [1](https://pdfs.semanticscholar.org/95df/dc02010b9c390878729f459893c2a5c0898f.pdf)
-
-
-### Learning from imbalanced data sets: a comparison of various strategies
-
-Tag(s): `classification` `synthetic-data` `subsampling` `recognition` 
-
-Link(s): [1](http://www.aaai.org/Papers/Workshops/2000/WS-00-05/WS00-05-003.pdf)
+[synthetic-data](output/synthetic-data), [classification](output/classification), [recognition](output/recognition), [subsampling](output/subsampling)
 <!--/PAPERS-OUTPUT-->
