@@ -58,7 +58,7 @@ class Paper:
 
     @property
     def tags(self):
-        tags = self._tags
+        tags = self._tags[:]
         if self.summary is not None:
             tags.append('has-summary')
         return tags
