@@ -1,5 +1,5 @@
-
-# [<](../README.md) Handling imbalanced datasets: A review
+[Imbalanced Learning Papers](../README.md)
+# ↳ Handling imbalanced datasets: A review
 
 2006
 

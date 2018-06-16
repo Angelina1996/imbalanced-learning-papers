@@ -1,5 +1,5 @@
-
-# [<](../README.md) Learning from imbalanced data sets: a comparison of various strategies
+[Imbalanced Learning Papers](../README.md)
+# ↳ Learning from imbalanced data sets: a comparison of various strategies
 
 2000
 
