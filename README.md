@@ -10,8 +10,8 @@ To add a paper:
   3. Optionally, send a pull request if you think it should be included here.
 
 
-## Papers
+## Papers by tag
 
 <!--PAPERS-OUTPUT-->
-[classification](output/classification.md), [subsampling](output/subsampling.md), [recognition](output/recognition.md), [synthetic-data](output/synthetic-data.md)
+[synthetic-data](output/synthetic-data.md), [recognition](output/recognition.md), [classification](output/classification.md), [subsampling](output/subsampling.md)
 <!--/PAPERS-OUTPUT-->

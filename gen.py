@@ -12,6 +12,9 @@ from shutil import rmtree
 from glob import iglob
 import yaml
 
+in_dir = './input'
+out_dir = './output'
+
 
 class Paper:
 
@@ -34,10 +37,14 @@ class Paper:
             self.links = data['links']
 
 
+if os.path.isdir(out_dir):
+    rmtree(out_dir)
+os.mkdir(out_dir)
+
 # Build paper/tag lists
 papers = []
 tags = {}
-for yaml_file in iglob('./papers/*.yaml'):
+for yaml_file in iglob(os.path.join(in_dir, '*.yaml')):
     with open(yaml_file, 'r') as f:
         try:
             paper = yaml.load(f)
@@ -49,11 +56,6 @@ for yaml_file in iglob('./papers/*.yaml'):
                 tags[tag].append(paper)
         except yaml.YAMLError as e:
             print(e)
-
-out_dir = './output'
-if os.path.isdir(out_dir):
-    rmtree(out_dir)
-os.mkdir(out_dir)
 
 # Create paper files
 for paper in papers:
