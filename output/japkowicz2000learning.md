@@ -1,5 +1,5 @@
 # [Imbalanced Learning Papers](../README.md)
-## ↳ Learning from imbalanced data sets: a comparison of various strategies
+## ↳ Learning from imbalanced data sets: a comparison of various strategies (Japkowicz, 2000)
 
 2000
 

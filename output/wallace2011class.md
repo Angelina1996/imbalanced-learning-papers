@@ -1,5 +1,5 @@
 # [Imbalanced Learning Papers](../README.md)
-## ↳ Class Imbalance, Redux
+## ↳ Class Imbalance, Redux (Wallace et al., 2011)
 
 2011
 

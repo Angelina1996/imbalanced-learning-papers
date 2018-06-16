@@ -36,6 +36,18 @@ class Paper:
         if 'links' in data and len(data['links']) > 0:
             self.links = data['links']
 
+    @property
+    def author(self):
+        authors = []
+        for author in self.authors:
+            authors.append(author.split(' ')[-1])
+        if len(authors) > 1:
+            return authors[0] + ' et al.'
+        elif len(authors) == 1:
+            return authors[0]
+        else:
+            return 'Unknown'
+
 
 if os.path.isdir(out_dir):
     rmtree(out_dir)
@@ -61,7 +73,7 @@ for yaml_file in iglob(os.path.join(in_dir, '*.yaml')):
 for paper in papers:
     paper_file = os.path.join(out_dir, '%s.md' % paper.id)
     print('Creating %s' % paper_file)
-    paper_md = '# [Imbalanced Learning Papers](../README.md)\n## ↳ %s' % paper.title
+    paper_md = '# [Imbalanced Learning Papers](../README.md)\n## ↳ %s (%s, %s)' % (paper.title, paper.author, paper.year)
     paper_md += '\n\n' + paper.year
     if len(paper.authors) > 0:
         paper_md += '\n\n' + ''.join(paper.authors)
@@ -78,7 +90,7 @@ for tag, papers in tags.items():
     print('Creating %s' % tag_file)
     tag_md = '# [Imbalanced Learning Papers](../README.md)\n## ↳ Tag: `%s`' % tag
     for paper in papers:
-        tag_md += '\n\n### [%s](%s.md)\n\n' % (paper.title, paper.id)
+        tag_md += '\n\n### [%s (%s, %s)](%s.md)\n\n' % (paper.title, paper.author, paper.year, paper.id)
         tag_md += ', '.join(paper.tags)
     with open(tag_file, 'w') as f:
         f.write(tag_md)
