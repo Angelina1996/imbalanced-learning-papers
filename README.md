@@ -4,7 +4,7 @@
 Papers on imbalanced learning, organized by topic tag.  Some with summaries.
 
 
-## Browse by tag
+## Browse papers by tag
 
 <!--PAPERS-OUTPUT-->
   - [classification](output/classification.md)
