@@ -74,11 +74,10 @@ for paper in papers:
     paper_file = os.path.join(out_dir, '%s.md' % paper.id)
     print('Creating %s' % paper_file)
     paper_md = '# [Imbalanced Learning Papers](../README.md)\n## ↳ %s (%s, %s)' % (paper.title, paper.author, paper.year)
-    paper_md += '\n\n' + paper.year
     if len(paper.authors) > 0:
-        paper_md += '\n\n' + ''.join(paper.authors)
+        paper_md += '\n\n' + ', '.join(paper.authors)
     if len(paper.links) > 0:
-        paper_md += '\n\n### Links\n\n'
+        paper_md += '\n\n### Link(s)\n\n'
         for link in paper.links:
             paper_md += '%s\n' % link
     with open(paper_file, 'w') as f:
