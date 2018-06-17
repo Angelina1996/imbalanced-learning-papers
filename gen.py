@@ -61,32 +61,33 @@ class Paper:
         return tags
 
 
-# Table rows
-table = [['Paper', 'Tags', 'Summary']]
+papers = []
 for yaml_file in iglob(os.path.join(in_dir, '*.yaml')):
     with open(yaml_file, 'r') as f:
         try:
-
-            paper = Paper(os.path.basename(yaml_file[:-5]), yaml.load(f))
-
-            title = '%s (%s, %s)' % (paper.title, paper.author, paper.year)
-            if len(paper.links) > 0:
-                title = '<a target="_blank" href="%s">%s</a>' % (paper.links[0], title)
-
-            tags = []
-            for tag in paper.tags:
-                tags.append('<a class="tag">%s</a>' % (tag))
-            tags = ' '.join(tags)
-
-            summary = ''
-            if paper.summary is not None:
-                summary = '<a href="#">Summary<a>'
-
-            table.append([title, tags, summary])
-
+            papers.append(Paper(os.path.basename(yaml_file[:-5]), yaml.load(f)))
         except yaml.YAMLError as e:
             print(e)
+papers.sort(key=lambda p: p.year)
 
+# Table rows
+table = [['Paper', 'Tags', 'Summary']]
+for paper in papers:
+
+    title = '%s (%s, %s)' % (paper.title, paper.author, paper.year)
+    if len(paper.links) > 0:
+        title = '<a target="_blank" href="%s">%s</a>' % (paper.links[0], title)
+
+    tags = []
+    for tag in paper.tags:
+        tags.append('<a class="tag">%s</a>' % (tag))
+    tags = ' '.join(tags)
+
+    summary = ''
+    if paper.summary is not None:
+        summary = '<a href="#">Summary<a>'
+
+    table.append([title, tags, summary])
 
 def generate_html_table(table):
 
