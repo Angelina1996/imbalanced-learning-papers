@@ -138,6 +138,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 <script type="text/javascript">
+// 'Random' number generator
+var seed = 123;
+function random() {
+    var x = Math.sin(seed++) * 10000;
+    return x - Math.floor(x);
+}
 
 $(function() {
 
@@ -148,7 +154,7 @@ $(function() {
         var tag = $(this).text();
         if (!tag_colors.hasOwnProperty(tag)) {
             // Tag not already processed
-            tag_colors[tag] = "hsl(" + 360 * Math.random() + ',' + (25 + 70 * Math.random()) + '%,' + (85 + 10 * Math.random()) + '%)';
+            tag_colors[tag] = "hsl(" + 360 * random() + ',' + (25 + 70 * random()) + '%,' + (85 + 10 * random()) + '%)';
             $('#tag-bar').append('<a class="tag" style="background-color: ' + tag_colors[tag] + '">' + $(this).text() + '</a>')
         }
         $(this).css('background-color', tag_colors[tag])
