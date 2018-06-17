@@ -10,8 +10,7 @@ from shutil import rmtree
 from glob import iglob
 import yaml
 
-in_dir = './yaml'
-out_dir = './output'
+in_dir = './papers'
 
 
 class Paper:
