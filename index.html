@@ -13,11 +13,24 @@
     </style>
 </head>
 <body>
+
 <h1>Imbalanced Learning Papers</h1>
-<br />
-<input id="filter-input" placeholder="Filter papers by keyword or tag..." class='form-control'>
-<br />
-<div id="tag-bar"></div>
+
+<div class="row">
+
+<div class="col-md-4">
+
+	<h2>Filter...</h2>
+
+	<h3>By keyword</h3>
+	<input id="filter-input" placeholder="Filter papers by keyword or tag..." class='form-control' type="search">
+
+	<h3>By topic</h3>
+	<div id="tag-bar"></div>
+
+</div>
+
+<div class="col-md-8">
 <table class="table">
 <!--PAPERS-TABLE-->
 	<tbody id="paper-list">
@@ -140,6 +153,10 @@
 
 <!--/PAPERS-TABLE-->
 </table>
+
+</div>
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 <script type="text/javascript">
@@ -160,7 +177,7 @@ $(function() {
         if (!tag_colors.hasOwnProperty(tag)) {
             // Tag not already processed
             tag_colors[tag] = "hsl(" + 360 * random() + ',' + (25 + 70 * random()) + '%,' + (85 + 10 * random()) + '%)';
-            $('#tag-bar').append('<a class="tag" style="background-color: ' + tag_colors[tag] + '">' + $(this).text() + '</a>')
+            $('#tag-bar').append('<a class="tag" style="background-color: ' + tag_colors[tag] + '">' + $(this).text() + '</a><br />')
         }
         $(this).css('background-color', tag_colors[tag])
     });
@@ -188,12 +205,12 @@ $(function() {
         // Recursively filter rows
         rows.filter(function (i, v) {
             for (var d = 0; d < query.length; ++d) {
-                if ($(this).is(":contains('" + query[d] + "')")) {
-                    return true;
+                if (!$(this).is(":contains('" + query[d] + "')")) {
+                    return false;
                 }
             }
-            return false;
-        }) .show();  // show the rows that match.
+            return true;
+        }).show();  // show the rows that match.
 
     });
 });
