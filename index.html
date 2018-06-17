@@ -37,7 +37,30 @@
 		<tr>
 			<td><a target="_blank" href="http://www.aaai.org/Papers/Workshops/2000/WS-00-05/WS00-05-003.pdf">Learning from imbalanced data sets: a comparison of various strategies (Japkowicz, 2000)</a></td>
 			<td><a class="tag">classification</a> <a class="tag">synthetic-data</a> <a class="tag">subsampling</a> <a class="tag">recognition</a> <a class="tag">has-summary</a></td>
-			<td><a href="#">Summary<a></td>
+			<td><a href="#" title="  - Contributions:
+    - Looks at basic data characterization/factors on difficulty
+    - Compares methods (random under-sampling, random over-sampling, boundary-focused resampling, basic recognition) on simple synthetic data.
+  - Data factors/characterization:
+    - Data generated synthetically with 'backbone' model; essentially alternating classes on the number line, where their definition of 'complexity' is related to the number of alternations over the given interval.
+    - Important to note very complex data gives poor accuracy even for non-imbalanced data, so important to make any comparisons with this in mind.
+    - Linearly separable data not sensitive to any degree of imbalance, regardless of training set size.
+    - More complex data more sensitive to imbalance; increasing complexity correlated with increased sensitivity to imbalance.
+    - Suggests that we should concentrate both on (reducing) complexity and re-balancing the data as the most important aspects of the problem.
+  - Methods:
+    - Purely random over- and under-sampling found to work reasonably well, especially as higher complexities.
+    - Boundary-focused resampling (over- and under-) found to work about as well as purely random; no suggestion that these perform notably better.
+    - Down-sampling appears to work better than over-sampling for large domains.
+    - Recognition-based approach doesn't work as well until the data is at the highest complexities.
+    - Recognition-based expected to perform better when there are very few minority class examples.
+    - Recognition-based methods that learn the majority class work **much** better than those which learn the minority class.
+  - Evaluation & Future Work
+    - Only tests on *very* simple synthetic data.  More complex data might show different trends/results.  In particular:
+      - Data are 1-dimensional
+      - Adhere to simple 'backbone' model
+      - 'Balanced imbalance' only; no sub-clustering of the classes with different characteristics.
+    - Only makes use of simple feed-forward networks.
+    - Only tests simple methods.
+  ">Hover for summary</a></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://www.jair.org/index.php/jair/article/view/10302/24590">SMOTE: Synthetic Minority Over-sampling Technique (Chawla et al., 2002)</a></td>
@@ -51,8 +74,19 @@
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://pdfs.semanticscholar.org/95df/dc02010b9c390878729f459893c2a5c0898f.pdf">Handling imbalanced datasets: A review (Kotsiantis et al., 2006)</a></td>
-			<td><a class="tag">classification</a> <a class="tag">has-summary</a></td>
-			<td><a href="#">Summary<a></td>
+			<td><a class="tag">classification</a> <a class="tag">review</a> <a class="tag">has-summary</a></td>
+			<td><a href="#" title="  - Contributions:
+    - Provides a review of methods for imbalanced classification to date.
+  - General:
+    - Distinguishes between data-level and algorithm-level methods.
+    - Data-level methods here focus on various resampling approaches: random, directed.
+    - Algo-level: adjusting the costs of the various classes so as to counter the class imbalance, adjusting the decision threshold, and recognition-based (i.e., learning from one class) rather than discrimination-based (two class) learning.  Also mentions mixture-of-experts, which combines the results of more than one classifier.
+    - Many learning methods prefer majority class.
+  - Data-level
+    - Random undersampling discards potentially useful data.
+    - &quot;Another problem with this approach is that the purpose of machine learning is for the classifier to estimate the probability distribution of the target population. Since that distribution is unknown we try to estimate the population distribution using a sample distribution. Statistics tells us that as long as the sample is drawn randomly, the sample distribution can be used to estimate the population dis- tribution from where it was drawn. Hence, by learning the sample distribution we can learn to approximate the target distribution. Once we perform undersampling of the majority class, however, the sample can no longer be considered random.&quot;
+    - Tomek links - &quot;can be used as an under-sampling method or as a data cleaning method. As an under-sampling method, only examples belonging to the majority class are eliminated, and as a data cleaning method, examples of both classes are removed.&quot;
+  ">Hover for summary</a></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://ieeexplore.ieee.org/abstract/document/5128907/">Learning from imbalanced data (He et al., 2009)</a></td>

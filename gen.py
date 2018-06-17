@@ -85,7 +85,7 @@ for paper in papers:
 
     summary = ''
     if paper.summary is not None:
-        summary = '<a href="#">Summary<a>'
+        summary = '<a href="#" title="%s">Hover for summary</a>' % paper.summary.replace('"', '&quot;')
 
     table.append([title, tags, summary])
 
