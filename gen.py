@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Script to generate the dynamic components of README.md
-
-You probably don't need to run this, unless you have added a new paper and want it to show up there.
+Script to generate the HTML for the one-page.
 """
 
 import os
@@ -64,68 +62,63 @@ class Paper:
         return tags
 
 
-if os.path.isdir(out_dir):
-    rmtree(out_dir)
-os.mkdir(out_dir)
-
-# Build paper/tag lists
-papers = []
-tags = {}
+# Table rows
+table = [['Paper', 'Tags', 'Summary']]
 for yaml_file in iglob(os.path.join(in_dir, '*.yaml')):
     with open(yaml_file, 'r') as f:
         try:
-            paper = yaml.load(f)
-            paper = Paper(os.path.basename(yaml_file[:-5]), paper)
-            papers.append(paper)
+
+            paper = Paper(os.path.basename(yaml_file[:-5]), yaml.load(f))
+
+            title = '%s (%s, %s)' % (paper.title, paper.author, paper.year)
+            if len(paper.links) > 0:
+                title = '<a target="_blank" href="%s">%s</a>' % (paper.links[0], title)
+
+            tags = []
             for tag in paper.tags:
-                if tag not in tags:
-                    tags[tag] = []
-                tags[tag].append(paper)
+                tags.append('<a class="tag">%s</a>' % (tag))
+            tags = ' '.join(tags)
+
+            summary = ''
+            if paper.summary is not None:
+                summary = '<a href="#">Summary<a>'
+
+            table.append([title, tags, summary])
+
         except yaml.YAMLError as e:
             print(e)
 
-# Create paper files
-for paper in papers:
-    paper_file = os.path.join(out_dir, '%s.md' % paper.id)
-    print('Creating %s' % paper_file)
-    paper_md = '# [Imbalanced Learning Papers](../README.md)\n## ↳ %s (%s, %s)' % (paper.title, paper.author, paper.year)
-    if len(paper.authors) > 0:
-        paper_md += '\n\n' + ', '.join(paper.authors)
-    if len(paper.links) > 0:
-        paper_md += '\n\n### Link(s)\n\n'
-        for link in paper.links:
-            paper_md += '%s\n' % link
-    if paper.summary is not None:
-        paper_md += '\n\n### Summary\n\n'
-        paper_md += paper.summary
-    with open(paper_file, 'w') as f:
-        f.write(paper_md)
 
-# Create tag files
-for tag, papers in tags.items():
-    tag_file = os.path.join(out_dir, '%s.md' % tag)
-    print('Creating %s' % tag_file)
-    tag_md = '# [Imbalanced Learning Papers](../README.md)\n## ↳ Tag: `%s`' % tag
-    for paper in sorted(papers, key=lambda p: p.year):
-        tag_md += '\n\n### [%s (%s, %s)](%s.md)\n\n' % (paper.title, paper.author, paper.year, paper.id)
-        tag_md += ', '.join(paper.tags)
-    with open(tag_file, 'w') as f:
-        f.write(tag_md)
+def generate_html_table(table):
 
-# Add tag links to readme
-print('Adding tag list to README.md')
-tag_links = []
-for tag in sorted(list(tags.keys())):
-    tag_links.append('  - [%s](%s/%s.md)' % (tag, out_dir[2:], tag))
-# Place it in the README
-tag_links = '<!--PAPERS-OUTPUT-->\n' + '\n'.join(tag_links) + '\n<!--/PAPERS-OUTPUT-->'
-with open('README.md', 'r') as f:
+    table_html = ''
+
+    # # Table header
+    # table_html = '\t<thead>\n\t\t<tr>\n'
+    # for th in table[0]:
+    #     table_html += '\t\t\t<th>%s</th>\n' % str(th)
+    # table_html += '\t\t</tr>\n\t</thead>\n'
+
+    # Table body
+    table_html += '\t<tbody id="paper-list">\n'
+    for row in table[1:]:
+        table_html += '\t\t<tr>\n'
+        for td in row:
+            table_html += '\t\t\t<td>%s</td>\n' % str(td)
+        table_html += '\t\t</tr>\n'
+    table_html += '\t</tbody>\n'
+
+    return table_html
+
+
+table_html = '<!--PAPERS-TABLE-->\n' + generate_html_table(table) + '\n<!--/PAPERS-TABLE-->'
+with open('index.html', 'r') as f:
     readme = f.read()
-readme = re.sub(r"(<!--PAPERS-OUTPUT-->[^\$]+<!--/PAPERS-OUTPUT-->)",
-                tag_links,
+readme = re.sub(r"(<!--PAPERS-TABLE-->[^\$]+<!--/PAPERS-TABLE-->)",
+                table_html,
                 readme,
                 re.M)
-with open('README.md', 'w+') as f:
+with open('index.html', 'w+') as f:
     f.write(readme)
 
 
