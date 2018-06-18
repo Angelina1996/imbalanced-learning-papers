@@ -22,12 +22,11 @@
 
 <div class="col-md-3">
 
-	<h2>Filter...</h2>
-
-	<h3>By keyword</h3>
+	<h4>Filter by keyword</h4>
 	<input id="filter-input" placeholder="Filter papers by keyword or tag..." class='form-control' type="search">
-
-	<h3>By topic</h3>
+	
+	<br />
+	<h4>Filter by topic</h4>
 	<div id="tag-bar"></div>
 
 </div>
@@ -138,8 +137,33 @@
 			<td><a class="tag">calibration</a></td>
 		</tr>
 		<tr>
-			<td><a target="_blank" href="https://www.semanticscholar.org/paper/Class-Imbalance%2C-Redux-Wallace-Small/a8ef5a810099178b70d1490a4e6fc4426b642cde"title="">Class Imbalance, Redux (Wallace et al., 2011)</a></td>
-			<td><a class="tag">review</a> <a class="tag">classification</a></td>
+			<td><a target="_blank" href="https://www.semanticscholar.org/paper/Class-Imbalance%2C-Redux-Wallace-Small/a8ef5a810099178b70d1490a4e6fc4426b642cde"title="  - Abstract:
+    - Looks at dataset characteristics that exacerbate the calss-imbalance problem; theoretical understanding of imbalance.
+    - Advocates the approach of bagging an ensemble of classifiers induced over balanced bootstrap training samples.
+  - Introduction:
+    - Class imbalance problem and importance.
+    - Inadequacy of standard methods
+    - Many methods have been proposed, but relatively little work to characterize data factors.  Hence not clear which method should be used for any given task.
+    - Summary of resampling, cost-sensitive learning, etc.
+    - Resampling is a high-variance technique
+    - 'Bagging' classifiers into an ensemble reduces variance of classifiers.
+    - => such ensembles of classifiers induces on resampled data should always be used
+    - Claims to show that &quot;cost-sensitive approaches that look to improve performance achieved under imbalance by, for example, modifying the relative costs of false negatives to false positives in an objective function, will generally be effective only when the training dataset is not separable.&quot;
+    - Contributions:
+      - Probabilistic theory to quantify the effects of imbalance on the induction of empirical-loss minimizing models
+      - Analysis of popular methods and discussion of when they might work best.
+  - Theoretical analysis of imbalance (data factors):
+    - Basic definitions and characterization of the imbalanced data problem.
+  - Probabilistic framework
+  - Synthetic data generation and experiments:
+    - Intended to back up probabilistic framework
+    - Run with SMOTE and weighted-SVM
+    - Test various data factors and compares results with what is expected from the framework
+  - Conclusions:
+    - It follows from the probabilistic interpretation of class imbalance developed in this paper that re-sampling methods, specifically undersampling, ought to be used to handle imbalance in most scenarios 
+    - Bagging should be used to reduce the variance of this approach
+  ">Class Imbalance, Redux (Wallace et al., 2011)</a></td>
+			<td><a class="tag">classification</a> <a class="tag">data-factors</a> <a class="tag">ensembles</a> <a class="tag">synthetic-data</a> <a class="tag">smote</a> <a class="tag">svm</a> <a class="tag">has-summary</a></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3238139/"title="">Zero-inflated and Hurdle Models of Count Data with Extra Zeros: Examples from an HIV-Risk Reduction Intervention Trial (Hu et al., 2011)</a></td>

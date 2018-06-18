@@ -1,14 +1,45 @@
 ---
 title: 'Class Imbalance, Redux'
 year: 2011
+cited_by_count: 72
 authors:
   - Byron C. Wallace
   - Kevin Small
   - Carla E. Brodley
   - Thomas A. Trikalinos
 tags:
-  - review
   - classification
+  - data-factors
+  - ensembles
+  - synthetic-data
+  - smote
+  - svm
 links:
   - https://www.semanticscholar.org/paper/Class-Imbalance%2C-Redux-Wallace-Small/a8ef5a810099178b70d1490a4e6fc4426b642cde
+summary: |
+  - Abstract:
+    - Looks at dataset characteristics that exacerbate the calss-imbalance problem; theoretical understanding of imbalance.
+    - Advocates the approach of bagging an ensemble of classifiers induced over balanced bootstrap training samples.
+  - Introduction:
+    - Class imbalance problem and importance.
+    - Inadequacy of standard methods
+    - Many methods have been proposed, but relatively little work to characterize data factors.  Hence not clear which method should be used for any given task.
+    - Summary of resampling, cost-sensitive learning, etc.
+    - Resampling is a high-variance technique
+    - 'Bagging' classifiers into an ensemble reduces variance of classifiers.
+    - => such ensembles of classifiers induces on resampled data should always be used
+    - Claims to show that "cost-sensitive approaches that look to improve performance achieved under imbalance by, for example, modifying the relative costs of false negatives to false positives in an objective function, will generally be effective only when the training dataset is not separable."
+    - Contributions:
+      - Probabilistic theory to quantify the effects of imbalance on the induction of empirical-loss minimizing models
+      - Analysis of popular methods and discussion of when they might work best.
+  - Theoretical analysis of imbalance (data factors):
+    - Basic definitions and characterization of the imbalanced data problem.
+  - Probabilistic framework
+  - Synthetic data generation and experiments:
+    - Intended to back up probabilistic framework
+    - Run with SMOTE and weighted-SVM
+    - Test various data factors and compares results with what is expected from the framework
+  - Conclusions:
+    - It follows from the probabilistic interpretation of class imbalance developed in this paper that re-sampling methods, specifically undersampling, ought to be used to handle imbalance in most scenarios 
+    - Bagging should be used to reduce the variance of this approach
 ...
