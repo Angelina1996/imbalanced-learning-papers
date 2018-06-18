@@ -71,21 +71,23 @@ for yaml_file in iglob(os.path.join(in_dir, '*.yaml')):
 papers.sort(key=lambda p: p.year)
 
 # Table rows
-table = [['Paper', 'Tags', 'Summary']]
+table = [['Paper', 'Tags']]
 for paper in papers:
 
     title = '%s (%s, %s)' % (paper.title, paper.author, paper.year)
+    summary = ''
+    if paper.summary is not None:
+        summary = paper.summary.replace('"', '&quot;')
+        
     if len(paper.links) > 0:
-        title = '<a target="_blank" href="%s">%s</a>' % (paper.links[0], title)
-
+        title = '<a target="_blank" href="%s"title="%s">%s</a>' % (paper.links[0], summary, title)
+    else:
+        title = '<span title="%s">%s</span>' % (summary, title)
+	
     tags = []
     for tag in paper.tags:
         tags.append('<a class="tag">%s</a>' % (tag))
     tags = ' '.join(tags)
-
-    summary = ''
-    if paper.summary is not None:
-        summary = '<a href="#" title="%s">Hover for summary</a>' % paper.summary.replace('"', '&quot;')
 
     table.append([title, tags, summary])
 
