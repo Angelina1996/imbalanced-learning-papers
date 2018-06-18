@@ -67,4 +67,5 @@ summary: |
   - Conclusions:
     - Often reported that cost-sensitive learning outperforms resampling methods
     - But clever resampling and combination methods can do quite more than cost-sensitive learning, since they can provide new info or eliminate redundant info for the learning algo.
+    - Other data factors matter, but for larger datasets their effects are reduced, since the minority class is better represented.
 ...
