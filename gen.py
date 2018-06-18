@@ -89,7 +89,7 @@ for paper in papers:
         tags.append('<a class="tag">%s</a>' % (tag))
     tags = ' '.join(tags)
 
-    table.append([title, tags, summary])
+    table.append([title, tags])
 
 def generate_html_table(table):
 

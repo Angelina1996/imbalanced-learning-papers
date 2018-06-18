@@ -66,43 +66,13 @@
     - Only tests simple methods.
   ">Learning from imbalanced data sets: a comparison of various strategies (Japkowicz, 2000)</a></td>
 			<td><a class="tag">classification</a> <a class="tag">synthetic-data</a> <a class="tag">subsampling</a> <a class="tag">recognition</a> <a class="tag">has-summary</a></td>
-			<td>  - Abstract:
-    - Looks at basic data characterization/factors on difficulty
-    - Compares methods (random under-sampling, random over-sampling, boundary-focused resampling, basic recognition) on simple synthetic data.
-  - Introduction:
-    - Class imbalance is important; justification inc. real-world examples.
-    - Literature is sparse and not unified.  No comparison of suggested methods yet.
-    - This paper: addresses this; characterizes difficulty in the original dataset; compares some methods.
-  - Data characterization:
-    - Data generated synthetically with 'backbone' model; essentially alternating classes on the number line, where their definition of 'complexity' is related to the number of alternations over the given interval.
-    - Important to note very complex data gives poor accuracy even for non-imbalanced data, so important to make any comparisons with this in mind.
-    - Linearly separable data not sensitive to any degree of imbalance, regardless of training set size.
-    - More complex data more sensitive to imbalance; increasing complexity correlated with increased sensitivity to imbalance.
-    - Suggests that we should concentrate both on (reducing) complexity and re-balancing the data as the most important aspects of the problem.
-  - Comparison of methods:
-    - Purely random over- and under-sampling found to work reasonably well, especially as higher complexities.
-    - Boundary-focused resampling (over- and under-) found to work about as well as purely random; no suggestion that these perform notably better.
-    - Down-sampling appears to work better than over-sampling for large domains.
-    - Recognition-based approach doesn't work as well until the data is at the highest complexities.
-    - Recognition-based expected to perform better when there are very few minority class examples.
-    - Recognition-based methods that learn the majority class work **much** better than those which learn the minority class.
-  - Evaluation and future work:
-    - Only tests on *very* simple synthetic data.  More complex data might show different trends/results.  In particular, data in this paper:
-      - Are 1-dimensional
-      - Adhere to simple 'backbone' model
-      - 'Balanced imbalance' only; no sub-clustering of the classes with different characteristics.
-    - Only makes use of simple feed-forward networks.
-    - Only tests simple methods.
-  </td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://www.jair.org/index.php/jair/article/view/10302/24590"title="">SMOTE: Synthetic Minority Over-sampling Technique (Chawla et al., 2002)</a></td>
 			<td></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="http://www.jmlr.org/papers/volume8/owen07a/owen07a.pdf"title="">Infinitely Imbalanced Logistic Regression (Owen, 2006)</a></td>
-			<td></td>
 			<td></td>
 		</tr>
 		<tr>
@@ -158,152 +128,82 @@
     - Other data factors matter, but for larger datasets their effects are reduced, since the minority class is better represented.
   ">Handling imbalanced datasets: A review (Kotsiantis et al., 2006)</a></td>
 			<td><a class="tag">review</a> <a class="tag">classification</a> <a class="tag">undersampling</a> <a class="tag">oversampling</a> <a class="tag">mixture-of-experts</a> <a class="tag">cost-sensitive-learning</a> <a class="tag">boosting</a> <a class="tag">data-factors</a> <a class="tag">has-summary</a></td>
-			<td>  - Abstract:
-    - Provides a review of some common methods for imbalanced classification to date.
-  - Introduction:
-    - Imbalance is important; justification and real-world examples.
-    - Taxonomy between data-level and algorithm-level methods.
-    - Data-level includes: forms of resampling (random  oversampling/undersampling, directed oversampling/undersampling, informed variants of these, and combinations)
-    - Algo-level: adjusting the costs of the various classes so as to counter the class imbalance, adjusting the decision threshold, and recognition-based (i.e., learning from one class) rather than discrimination-based (two class) learning.  Also mentions mixture-of-experts, which combines the results of more than one classifier.
-    - Mixture of experts-- combine the results of many classifiers; each usually induced after over-sampling or under-sampling the data with different over/under-sampling rates.
-    - Mention of small disjuncts but no establishing description.  Notes importance of only retaining meaningful small disjuncts.
-    - Inductive bias: many systems will favor the more common class [referring to the standard problem of imbalanced classes]
-    - This paper does not focus on data factors [instead cites Weiss], but on techniques/solutions.
-  - Data-level methods:
-    - Undersampling:
-      - Random elimination of majority class examples.
-      - Discards potentially useful data.
-      - Mismatching input/output distributions problem exists.
-      - Tomek links: basic description; can be used as undersampling (remove majority only) or as data cleaning (remove examples of both classes)
-    - Oversampling:
-      - Random replication of minority class examples.
-      - Authors suggest oversampling increases likelihood of overfitting [cites chawla2002smote and kubat1997addressing]
-      - Problematic computational expense for already large datasets
-      - Brief description of SMOTE process; how it avoids overfitting.
-    - Feature selection:
-      - Existing feature selection methods are not very useful for imbalanced data [cites zheng2004feature].  Proposes selecting features for positive and negative classes separately and then combining them.
-  - Algorithm-level methods:
-    - Threshold method:
-      - Naive Bayes and some neural classifiers yield a score that represents the degree to which an example is a member of a class.
-      - Such ranking  can  be  used  to  produce  several  classifiers,  by  varying  the  threshold  of  an example pertaining to a class
-    - One-class learning:
-      - One-class learning useful on extremely imbalanced data with high-dimensional noisy feature space [cites raskutti2004extreme]
-    - Cost-sensitive learning:
-      - Instead of changing class distribution, we can alternatively incorporate costs in decision making by defining fixed and unequal misclassification costs between classes.
-      - The cost model takes the form of a cost matrix, which must be defined beforehand.
-      - Brief description of how this is used in practice.
-  - Combining methods:
-    - Mixture of expers approaches combine the results of many classifiers.
-    - This approach recognizes the fact that it is still unclear which sampling method performs best, what sampling rate should be used—and that the proper choice is probably domain  specific. 
-    -Results indicate that the mixture-of experts approach performs well, generally outperforming another method (AdaBoost), and doing especially well at covering the rare, positive, examples. 
-    - Examples of ensembles (SVM-based).
-    - Boosting algorithms: what they do; examples inc. AdaBost, RareBoost, SMOTEBoost
-  - Evaluation metrics:
-    - Precision-recall issues, why accuracy is less useful.
-    - Criteria for evaluating classifier performance on imbalanced data: min cost, max geometry mean, max sum, ROC.  Descriptions of each.
-  - Other problems:
-    - Class imbalances are not the only problem to contend with: the distribution of the data within each class is also relevant (between-class versus within-class imbalance) [cites [17], [34]]
-    - Summary of other potential factors in the data -- overlapping, small disjuncts, etc.
-  - Conclusions:
-    - Often reported that cost-sensitive learning outperforms resampling methods
-    - But clever resampling and combination methods can do quite more than cost-sensitive learning, since they can provide new info or eliminate redundant info for the learning algo.
-    - Other data factors matter, but for larger datasets their effects are reduced, since the minority class is better represented.
-  </td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://ieeexplore.ieee.org/abstract/document/5128907/"title="">Learning from imbalanced data (He et al., 2009)</a></td>
 			<td><a class="tag">review</a></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://pdfs.semanticscholar.org/1cdf/7eab753db92c37a29980c0cd2c46130b271e.pdf"title="">Calibration of Machine Learning Models (Bella et al., 2010)</a></td>
 			<td><a class="tag">calibration</a></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://www.semanticscholar.org/paper/Class-Imbalance%2C-Redux-Wallace-Small/a8ef5a810099178b70d1490a4e6fc4426b642cde"title="">Class Imbalance, Redux (Wallace et al., 2011)</a></td>
 			<td><a class="tag">review</a> <a class="tag">classification</a></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3238139/"title="">Zero-inflated and Hurdle Models of Count Data with Extra Zeros: Examples from an HIV-Risk Reduction Intervention Trial (Hu et al., 2011)</a></td>
-			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://www.researchgate.net/profile/Andrew_Wong8/publication/263913891_Classification_of_imbalanced_data_a_review/links/550e28780cf212874167e2af/Classification-of-imbalanced-data-a-review.pdf?origin=publication_detail"title="">Classification of imbalanced data: a review (Wong et al., 2011)</a></td>
 			<td><a class="tag">review</a> <a class="tag">classification</a></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="http://cloud.politala.ac.id/politala/Jurnal/JurnalTI/Jurnal%2035/2Fs10618-012-0295-5.pdf"title="">Training and assessing classification rules with imbalanced data (Menardi et al., 2012)</a></td>
-			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="http://aircconline.com/ijdkp/V3N4/3413ijdkp02.pdf"title="">Imbalanced Data Learning Approaches Review (Bekkar et al., 2013)</a></td>
 			<td><a class="tag">review</a> <a class="tag">classification</a></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://lib.ugent.be/fulltxt/RUG01/002/163/708/RUG01-002163708_2014_0001_AC.pdf"title="">A comparison of different methods for modelling rare events data (Paal, 2013)</a></td>
 			<td><a class="tag">review</a></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://pdfs.semanticscholar.org/ca9e/f070d2a424b344b814de1196520da2f34ad7.pdf"title="">An insight into classification with imbalanced data: Empirical results and current trends on using data intrinsic characteristics (López et al., 2013)</a></td>
 			<td><a class="tag">review</a></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="http://people.csail.mit.edu/romer/papers/TISTRespPredAds.pdf"title="">Simple and Scalable Response Prediction for Display Advertising (Chapelle et al., 2014)</a></td>
-			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://www.researchgate.net/profile/Andrea_Dal_Pozzolo/publication/283349138_Calibrating_Probability_with_Undersampling_for_Unbalanced_Classification/links/563606c308ae88cf81bcd9f1/Calibrating-Probability-with-Undersampling-for-Unbalanced-Classification.pdf"title="">Calibrating Probability with Undersampling for Unbalanced Classification (Keren et al., 2015)</a></td>
 			<td><a class="tag">calibration</a> <a class="tag">classification</a></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://arxiv.org/pdf/1505.01658"title="">A Survey of Predictive Modelling under Imbalanced Distributions (Branco1 et al., 2015)</a></td>
 			<td><a class="tag">review</a></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://www.semanticscholar.org/paper/Training-deep-neural-networks-on-imbalanced-data-Wang-Liu/a0d86c44f2843a483dfffbfc03dda230bbaad4cc"title="">Training deep neural networks on imbalanced data sets (Wang et al., 2016)</a></td>
 			<td><a class="tag">deep-learning</a></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://link.springer.com/article/10.1007/s13748-016-0094-0"title="">Learning from imbalanced data: open challenges and future directions (Krawczyk1, 2016)</a></td>
 			<td><a class="tag">review</a></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://www.researchgate.net/profile/Akila_Somasundaram/publication/320895027_Modelling_a_Stable_Classifier_for_Handling_Large_Scale_Data_with_Noise_and_Imbalance/links/5a0180654585152c9daf7a98/Modelling-a-Stable-Classifier-for-Handling-Large-Scale-Data-with-Noise-and-Imbalance.pdf"title="">Modelling a Stable Classifier for Handling Large Scale Data with Noise and Imbalance (Somasundaram et al., 2017)</a></td>
-			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://arxiv.org/pdf/1710.05381"title="">A systematic study of the class imbalance problem in convolutional neural networks (Buda1 et al., 2017)</a></td>
 			<td></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="http://proceedings.mlr.press/v74/branco17a/branco17a.pdf"title="">SMOGN: a Pre-processing Approach for Imbalanced Regression (Branco et al., 2017)</a></td>
-			<td></td>
 			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://arxiv.org/pdf/1706.04599"title="">On Calibration of Modern Neural Networks (Guo et al., 2017)</a></td>
 			<td><a class="tag">calibration</a> <a class="tag">neural-networks</a></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td><a target="_blank" href="https://arxiv.org/pdf/1803.09546"title="">Calibrated Prediction Intervals for Neural Network Regressors (Keren et al., 2018)</a></td>
 			<td><a class="tag">calibration</a> <a class="tag">neural-networks</a> <a class="tag">regression</a></td>
-			<td></td>
 		</tr>
 	</tbody>
 
