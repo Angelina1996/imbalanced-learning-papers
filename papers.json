@@ -1,0 +1,670 @@
+[
+    {
+        "title": "Calibration of Machine Learning Models",
+        "year": 2010,
+        "authors": [
+            "Antonio Bella",
+            "Cèsar Ferri",
+            "José Hernández-Orallo",
+            "María José Ramírez-Quintana"
+        ],
+        "tags": [
+            "calibration"
+        ],
+        "links": [
+            "https://pdfs.semanticscholar.org/1cdf/7eab753db92c37a29980c0cd2c46130b271e.pdf"
+        ]
+    },
+    {
+        "title": "A Survey of Predictive Modelling under Imbalanced Distributions",
+        "year": 2015,
+        "authors": [
+            "Paula Branco1",
+            "Lúıs Torgo",
+            "Rita P. Ribeiro"
+        ],
+        "tags": [
+            "review"
+        ],
+        "links": [
+            "https://arxiv.org/pdf/1505.01658"
+        ]
+    },
+    {
+        "title": "SMOGN: a Pre-processing Approach for Imbalanced Regression",
+        "year": 2017,
+        "authors": [
+            "Paula Branco",
+            "Luis Torgo",
+            "Rita P. Ribeiro"
+        ],
+        "links": [
+            "http://proceedings.mlr.press/v74/branco17a/branco17a.pdf"
+        ]
+    },
+    {
+        "title": "A systematic study of the class imbalance problem in convolutional neural networks",
+        "year": 2017,
+        "authors": [
+            "Mateusz Buda1",
+            "Atsuto Maki",
+            "Maciej A. Mazurowski1,"
+        ],
+        "links": [
+            "https://arxiv.org/pdf/1710.05381"
+        ]
+    },
+    {
+        "title": "Simple and Scalable Response Prediction for Display Advertising",
+        "year": 2014,
+        "authors": [
+            "Olivier Chapelle",
+            "Eren Manavoglu",
+            "Romer Rosales"
+        ],
+        "links": [
+            "http://people.csail.mit.edu/romer/papers/TISTRespPredAds.pdf"
+        ]
+    },
+    {
+        "title": "SMOTE: Synthetic Minority Over-sampling Technique",
+        "year": 2002,
+        "authors": [
+            "Nitesh V. Chawla",
+            "Kevin W. Bowyer",
+            "Lawrence O. Hall",
+            "W. Philip Kegelmeyer"
+        ],
+        "links": [
+            "https://www.jair.org/index.php/jair/article/view/10302/24590"
+        ]
+    },
+    {
+        "title": "On Calibration of Modern Neural Networks",
+        "year": 2017,
+        "authors": [
+            "Chuan Guo",
+            "Geoff Pleiss",
+            "Yu Sun",
+            "Kilian Q. Weinberger"
+        ],
+        "tags": [
+            "calibration",
+            "neural-networks"
+        ],
+        "links": [
+            "https://arxiv.org/pdf/1706.04599"
+        ]
+    },
+    {
+        "title": "Zero-inflated and Hurdle Models of Count Data with Extra Zeros: Examples from an HIV-Risk Reduction Intervention Trial",
+        "year": 2011,
+        "authors": [
+            "Mei-Chen Hu",
+            "Martina Pavlicova",
+            "Edward V. Nunes"
+        ],
+        "links": [
+            "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3238139/"
+        ]
+    },
+    {
+        "title": "Calibrated Prediction Intervals for Neural Network Regressors",
+        "year": 2018,
+        "authors": [
+            "Gil Keren",
+            "Nicholas Cummins",
+            "Bjorn Schuller"
+        ],
+        "tags": [
+            "calibration",
+            "neural-networks",
+            "regression"
+        ],
+        "links": [
+            "https://arxiv.org/pdf/1803.09546"
+        ]
+    },
+    {
+        "title": "Classification of imbalanced data: a review",
+        "year": 2011,
+        "cited_by_count": 451,
+        "authors": [
+            "Andrew Wong",
+            "Mohamed S. Kamel"
+        ],
+        "tags": [
+            "review",
+            "classification"
+        ],
+        "links": [
+            "https://www.researchgate.net/profile/Andrew_Wong8/publication/263913891_Classification_of_imbalanced_data_a_review/links/550e28780cf212874167e2af/Classification-of-imbalanced-data-a-review.pdf?origin=publication_detail"
+        ]
+    },
+    {
+        "title": "Training deep neural networks on imbalanced data sets",
+        "year": 2016,
+        "authors": [
+            "Shoujin Wang",
+            "Wei Liu",
+            "Jia Wu",
+            "Longbing Cao",
+            "Qinxue Meng",
+            "Paul J. Kennedy"
+        ],
+        "tags": [
+            "deep-learning"
+        ],
+        "links": [
+            "https://www.semanticscholar.org/paper/Training-deep-neural-networks-on-imbalanced-data-Wang-Liu/a0d86c44f2843a483dfffbfc03dda230bbaad4cc",
+            "https://www.researchgate.net/publication/309778930_Training_deep_neural_networks_on_imbalanced_data_sets"
+        ]
+    },
+    {
+        "title": "Learning from imbalanced data: open challenges and future directions",
+        "year": 2016,
+        "authors": [
+            "Bartosz Krawczyk1"
+        ],
+        "tags": [
+            "review"
+        ],
+        "links": [
+            "https://link.springer.com/article/10.1007/s13748-016-0094-0"
+        ]
+    },
+    {
+        "title": "An insight into classification with imbalanced data: Empirical results and current trends on using data intrinsic characteristics",
+        "year": 2013,
+        "authors": [
+            "Victoria López",
+            "Alberto Fernández",
+            "Salvador García",
+            "Vasile Palade",
+            "Francisco Herrera"
+        ],
+        "tags": [
+            "review"
+        ],
+        "links": [
+            "https://pdfs.semanticscholar.org/ca9e/f070d2a424b344b814de1196520da2f34ad7.pdf"
+        ]
+    },
+    {
+        "title": "Training and assessing classification rules with imbalanced data",
+        "year": 2012,
+        "authors": [
+            "Giovanna Menardi",
+            "Nicola Torelli"
+        ],
+        "links": [
+            "http://cloud.politala.ac.id/politala/Jurnal/JurnalTI/Jurnal%2035/2Fs10618-012-0295-5.pdf"
+        ]
+    },
+    {
+        "title": "Infinitely Imbalanced Logistic Regression",
+        "year": 2006,
+        "authors": [
+            "Art B. Owen"
+        ],
+        "links": [
+            "http://www.jmlr.org/papers/volume8/owen07a/owen07a.pdf"
+        ]
+    },
+    {
+        "title": "Calibrating Probability with Undersampling for Unbalanced Classification",
+        "year": 2015,
+        "authors": [
+            "Gil Keren",
+            "Nicholas Cummins",
+            "Bjorn Schuller"
+        ],
+        "tags": [
+            "calibration",
+            "classification"
+        ],
+        "links": [
+            "https://www.researchgate.net/profile/Andrea_Dal_Pozzolo/publication/283349138_Calibrating_Probability_with_Undersampling_for_Unbalanced_Classification/links/563606c308ae88cf81bcd9f1/Calibrating-Probability-with-Undersampling-for-Unbalanced-Classification.pdf"
+        ]
+    },
+    {
+        "title": "Modelling a Stable Classifier for Handling Large Scale Data with Noise and Imbalance",
+        "year": 2017,
+        "authors": [
+            "Akita Somasundaram",
+            "U. Srinivasulu Reddy"
+        ],
+        "links": [
+            "https://www.researchgate.net/profile/Akila_Somasundaram/publication/320895027_Modelling_a_Stable_Classifier_for_Handling_Large_Scale_Data_with_Noise_and_Imbalance/links/5a0180654585152c9daf7a98/Modelling-a-Stable-Classifier-for-Handling-Large-Scale-Data-with-Noise-and-Imbalance.pdf"
+        ]
+    },
+    {
+        "title": "Learning from imbalanced data",
+        "year": 2009,
+        "cited_by_count": 3002,
+        "authors": [
+            "Haibo He",
+            "Edwardo A. Garcia"
+        ],
+        "tags": [
+            "review",
+            "classification",
+            "resampling",
+            "informed-resampling",
+            "smote",
+            "adasyn",
+            "kernel-based",
+            "active-learning",
+            "decision-trees",
+            "neural-networks",
+            "tomek-links",
+            "assessment-metrics",
+            "cost-sensitive"
+        ],
+        "links": [
+            "https://ieeexplore.ieee.org/abstract/document/5128907/"
+        ],
+        "summary": [
+            {
+                "Abstract": [
+                    "A comprehensive review of the development of research in learning from imbalanced data.",
+                    {
+                        "Includes": "nature of the problem, the state-of-the-art technologies, and the current assessment metrics used to evaluate learning performance."
+                    },
+                    "Also highlights the major opportunities and challenges, as well as potential important research directions."
+                ]
+            },
+            {
+                "Introduction": [
+                    "Prevalence and importance of imbalanced data.",
+                    "Informal characterization of the problem.",
+                    "Imbalanced data as a field is growing rapidly."
+                ]
+            },
+            {
+                "Nature of the problem": [
+                    "Informal definition of between-class imbalance.",
+                    "Between-class imblances can be binary or multiclass, though this paper focuses on binary.",
+                    "More motivation for solving the problem, examples, etc.",
+                    {
+                        "Intrinsic vs extrinsic imbalances": [
+                            "Intrinsically imbalanced datasets are a result of the nature of the dataspace itself.",
+                            "Extrinsicaly imbalanced datasets may be imbalanced because of variable factors like time and storage space."
+                        ]
+                    },
+                    "Relative imbalance vs absolute rarity.",
+                    {
+                        "Data complexity": [
+                            "Broad term that encompasses a lot.",
+                            "Within-class imbalances, where subconcepts have relatively fewer examples.",
+                            "Small disjuncts created by the classifier for these less well-represented subconcepts.",
+                            "Can be difficult to distinguish between very poorly represented subconcepts and simple random noise."
+                        ]
+                    },
+                    "Effects can combine, e.g. commonly with general imbalanced data and the small sample size problem."
+                ]
+            },
+            {
+                "Solutions": [
+                    "Uses decision trees as an illustrative example.",
+                    {
+                        "Problems with decision trees (for imbalanced data)": "reducing examples at each partition."
+                    },
+                    "Notational conventions.",
+                    {
+                        "Sampling methods": [
+                            "Basic description.",
+                            "Typically these methods show improvements for most imbalanced datasets.",
+                            "Random oversampling and undersampling, and the relative potential pitfalls of each.",
+                            "Informed undersampling to address information loss in random undersampling; EasyEnsemble, BalanceCascade, KNN, OSS.",
+                            {
+                                "Synthetic resampling": "SMOTE, how it works, problem of over-generalization."
+                            },
+                            "ADASYN to address the over-generalization problem in SMOTE.",
+                            {
+                                "Resampling with data cleaning": "Tomek links, and combination of TL with other methods."
+                            },
+                            {
+                                "Cluster-based sampling method": "CBO using K-means."
+                            },
+                            "Integration of sampling and boosting."
+                        ]
+                    },
+                    {
+                        "Cost-sensitive methods": [
+                            "Basic idea of assigning costs to misclassified examples.",
+                            "Typically use a pre-defined cost matrix.",
+                            "Can be superior to sampling methods in certain domains, and hence are a viable alternative.",
+                            {
+                                "Categories of methods": "dataspace weighting, ensemble-based, and classifier-incorporated."
+                            },
+                            "Cost-sensitive boosting methods.",
+                            "Implementations in decision trees and neural networks.  Brief mention of other classifiers."
+                        ]
+                    },
+                    {
+                        "Kernel-based methods and active learning": [
+                            {
+                                "Kernel based methods": [
+                                    "Based on statistical learning theory (VC)",
+                                    "Integration with sampling methods",
+                                    "Kernel modification methods."
+                                ]
+                            },
+                            {
+                                "Active learning": [
+                                    "Traditionally used for unsupervised learning, but applied to IL",
+                                    "Selects most informative instances from unseen training data."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Additional methods": [
+                            "One-class learning",
+                            "Autoassociators",
+                            "Etc."
+                        ]
+                    }
+                ]
+            },
+            {
+                "Assessment metrics for imbalanced learning": [
+                    "Accuracy/error rate are most frequent for classifier assessment, but have problems with IL.",
+                    {
+                        "Simple alternatives": "precision, recall, F-measure, G-mean. Issues with these."
+                    },
+                    "ROC curve to address the issues above.  Limitations of ROC curves.",
+                    "PR to address limitations of ROC curves.",
+                    "Cost curves for confidence intervals and inference.",
+                    "Assessment for multiclass IL."
+                ]
+            },
+            {
+                "Opportunities and challenges": [
+                    "Increasing availability of large amounts of data enriches opportunities of learning from imbalanced data.",
+                    "Most current work looks at specific algorithms with little work on theoretical underpinnings.",
+                    "Not clear which IL methods (if any) should be used for given data/task.",
+                    "Argues for a generlalist approach to making ML methods.",
+                    {
+                        "Key questions": [
+                            "1. What kind of assumptions will make imbalanced learning algorithms work better compared to learning from the original distributions?",
+                            "2. To what degree should one balance the original data set?",
+                            "3. How do imbalanced data distributions affect the computational complexity of learning algorithms?",
+                            "4. What is the general error bound given an imbalanced data distribution?",
+                            "5. Is there a general theoretical methodology that can alleviate the impediment of learning from imbalanced data sets for specific algorithms and application domains?"
+                        ]
+                    },
+                    "Lack of and need for a uniform benchmark platform for imbalanced learning.",
+                    "Lack of and need for standardized evaluation practices.",
+                    "Need for work on incremental learning.",
+                    "Need for work on semisupervised learning."
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Learning from imbalanced data sets: a comparison of various strategies",
+        "year": 2000,
+        "cited_by_count": 442,
+        "authors": [
+            "Nathalie Japkowicz"
+        ],
+        "tags": [
+            "classification",
+            "synthetic-data",
+            "subsampling",
+            "recognition"
+        ],
+        "links": [
+            "http://www.aaai.org/Papers/Workshops/2000/WS-00-05/WS00-05-003.pdf"
+        ],
+        "summary": [
+            {
+                "Abstract": [
+                    "Looks at basic data characterization/factors on difficulty",
+                    "Compares methods (random under-sampling, random over-sampling, boundary-focused resampling, basic recognition) on simple synthetic data."
+                ]
+            },
+            {
+                "Introduction": [
+                    "Class imbalance is important; justification inc. real-world examples.",
+                    "Literature is sparse and not unified.  No comparison of suggested methods yet.",
+                    {
+                        "This paper": "addresses this; characterizes difficulty in the original dataset; compares some methods."
+                    }
+                ]
+            },
+            {
+                "Data characterization": [
+                    "Data generated synthetically with 'backbone' model; essentially alternating classes on the number line, where their definition of 'complexity' is related to the number of alternations over the given interval.",
+                    "Important to note very complex data gives poor accuracy even for non-imbalanced data, so important to make any comparisons with this in mind.",
+                    "Linearly separable data not sensitive to any degree of imbalance, regardless of training set size.",
+                    "More complex data more sensitive to imbalance; increasing complexity correlated with increased sensitivity to imbalance.",
+                    "Suggests that we should concentrate both on (reducing) complexity and re-balancing the data as the most important aspects of the problem."
+                ]
+            },
+            {
+                "Comparison of methods": [
+                    "Purely random over- and under-sampling found to work reasonably well, especially as higher complexities.",
+                    "Boundary-focused resampling (over- and under-) found to work about as well as purely random; no suggestion that these perform notably better.",
+                    "Down-sampling appears to work better than over-sampling for large domains.",
+                    "Recognition-based approach doesn't work as well until the data is at the highest complexities.",
+                    "Recognition-based expected to perform better when there are very few minority class examples.",
+                    "Recognition-based methods that learn the majority class work **much** better than those which learn the minority class."
+                ]
+            },
+            {
+                "Evaluation and future work": [
+                    {
+                        "Only tests on *very* simple synthetic data.  More complex data might show different trends/results.  In particular, data in this paper": [
+                            "Are 1-dimensional",
+                            "Adhere to simple 'backbone' model",
+                            "Balanced imbalance only; no sub-clustering of the classes with different characteristics."
+                        ]
+                    },
+                    "Only makes use of simple feed-forward networks.",
+                    "Only tests simple methods."
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Class Imbalance, Redux",
+        "year": 2011,
+        "cited_by_count": 72,
+        "authors": [
+            "Byron C. Wallace",
+            "Kevin Small",
+            "Carla E. Brodley",
+            "Thomas A. Trikalinos"
+        ],
+        "tags": [
+            "classification",
+            "data-factors",
+            "ensembles",
+            "synthetic-data",
+            "smote",
+            "svm"
+        ],
+        "links": [
+            "https://www.semanticscholar.org/paper/Class-Imbalance%2C-Redux-Wallace-Small/a8ef5a810099178b70d1490a4e6fc4426b642cde"
+        ],
+        "summary": [
+            {
+                "Abstract": [
+                    "Looks at dataset characteristics that exacerbate the calss-imbalance problem; theoretical understanding of imbalance.",
+                    "Advocates the approach of bagging an ensemble of classifiers induced over balanced bootstrap training samples."
+                ]
+            },
+            {
+                "Introduction": [
+                    "Class imbalance problem and importance.",
+                    "Inadequacy of standard methods",
+                    "Many methods have been proposed, but relatively little work to characterize data factors.  Hence not clear which method should be used for any given task.",
+                    "Summary of resampling, cost-sensitive learning, etc.",
+                    "Resampling is a high-variance technique",
+                    "Bagging classifiers into an ensemble reduces variance of classifiers.",
+                    "=> such ensembles of classifiers induces on resampled data should always be used",
+                    "Claims to show that \"cost-sensitive approaches that look to improve performance achieved under imbalance by, for example, modifying the relative costs of false negatives to false positives in an objective function, will generally be effective only when the training dataset is not separable.\"",
+                    {
+                        "Contributions": [
+                            "Probabilistic theory to quantify the effects of imbalance on the induction of empirical-loss minimizing models",
+                            "Analysis of popular methods and discussion of when they might work best."
+                        ]
+                    }
+                ]
+            },
+            {
+                "Theoretical analysis of imbalance (data factors)": [
+                    "Basic definitions and characterization of the imbalanced data problem."
+                ]
+            },
+            "Probabilistic framework",
+            {
+                "Synthetic data generation and experiments": [
+                    "Intended to back up probabilistic framework",
+                    "Run with SMOTE and weighted-SVM",
+                    "Test various data factors and compares results with what is expected from the framework"
+                ]
+            },
+            {
+                "Conclusions": [
+                    "It follows from the probabilistic interpretation of class imbalance developed in this paper that re-sampling methods, specifically undersampling, ought to be used to handle imbalance in most scenarios",
+                    "Bagging should be used to reduce the variance of this approach"
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Handling imbalanced datasets: A review",
+        "year": 2006,
+        "cited_by_count": 443,
+        "authors": [
+            "Sotiris Kotsiantis",
+            "Dimitris Kanellopoulos",
+            "Panayiotis Pintelas"
+        ],
+        "tags": [
+            "review",
+            "classification",
+            "undersampling",
+            "oversampling",
+            "mixture-of-experts",
+            "cost-sensitive-learning",
+            "boosting",
+            "data-factors"
+        ],
+        "links": [
+            "https://pdfs.semanticscholar.org/95df/dc02010b9c390878729f459893c2a5c0898f.pdf"
+        ],
+        "summary": [
+            {
+                "Abstract": [
+                    "Provides a review of some common methods for imbalanced classification to date."
+                ]
+            },
+            {
+                "Introduction": [
+                    "Imbalance is important; justification and real-world examples.",
+                    "Taxonomy between data-level and algorithm-level methods.",
+                    {
+                        "Data-level includes": "forms of resampling (random  oversampling/undersampling, directed oversampling/undersampling, informed variants of these, and combinations)"
+                    },
+                    {
+                        "Algo-level": "adjusting the costs of the various classes so as to counter the class imbalance, adjusting the decision threshold, and recognition-based (i.e., learning from one class) rather than discrimination-based (two class) learning.  Also mentions mixture-of-experts, which combines the results of more than one classifier."
+                    },
+                    "Mixture of experts-- combine the results of many classifiers; each usually induced after over-sampling or under-sampling the data with different over/under-sampling rates.",
+                    "Mention of small disjuncts but no establishing description.  Notes importance of only retaining meaningful small disjuncts.",
+                    {
+                        "Inductive bias": "many systems will favor the more common class [referring to the standard problem of imbalanced classes]"
+                    },
+                    "This paper does not focus on data factors [instead cites Weiss], but on techniques/solutions."
+                ]
+            },
+            {
+                "Data-level methods": [
+                    {
+                        "Undersampling": [
+                            "Random elimination of majority class examples.",
+                            "Discards potentially useful data.",
+                            "Mismatching input/output distributions problem exists.",
+                            {
+                                "Tomek links": "basic description; can be used as undersampling (remove majority only) or as data cleaning (remove examples of both classes)"
+                            }
+                        ]
+                    },
+                    {
+                        "Oversampling": [
+                            "Random replication of minority class examples.",
+                            "Authors suggest oversampling increases likelihood of overfitting [cites chawla2002smote and kubat1997addressing]",
+                            "Problematic computational expense for already large datasets",
+                            "Brief description of SMOTE process; how it avoids overfitting."
+                        ]
+                    },
+                    {
+                        "Feature selection": [
+                            "Existing feature selection methods are not very useful for imbalanced data [cites zheng2004feature].  Proposes selecting features for positive and negative classes separately and then combining them."
+                        ]
+                    }
+                ]
+            },
+            {
+                "Algorithm-level methods": [
+                    {
+                        "Threshold method": [
+                            "Naive Bayes and some neural classifiers yield a score that represents the degree to which an example is a member of a class.",
+                            "Such ranking  can  be  used  to  produce  several  classifiers,  by  varying  the  threshold  of  an example pertaining to a class"
+                        ]
+                    },
+                    {
+                        "One-class learning": [
+                            "One-class learning useful on extremely imbalanced data with high-dimensional noisy feature space [cites raskutti2004extreme]"
+                        ]
+                    },
+                    {
+                        "Cost-sensitive learning": [
+                            "Instead of changing class distribution, we can alternatively incorporate costs in decision making by defining fixed and unequal misclassification costs between classes.",
+                            "The cost model takes the form of a cost matrix, which must be defined beforehand.",
+                            "Brief description of how this is used in practice."
+                        ]
+                    }
+                ]
+            },
+            {
+                "Combining methods": [
+                    "Mixture of expers approaches combine the results of many classifiers.",
+                    "This approach recognizes the fact that it is still unclear which sampling method performs best, what sampling rate should be used—and that the proper choice is probably domain  specific.",
+                    "Results indicate that the mixture-of experts approach performs well, generally outperforming another method (AdaBoost), and doing especially well at covering the rare, positive, examples.",
+                    "Examples of ensembles (SVM-based).",
+                    {
+                        "Boosting algorithms": "what they do; examples inc. AdaBost, RareBoost, SMOTEBoost"
+                    }
+                ]
+            },
+            {
+                "Evaluation metrics": [
+                    "Precision-recall issues, why accuracy is less useful.",
+                    {
+                        "Criteria for evaluating classifier performance on imbalanced data": "min cost, max geometry mean, max sum, ROC.  Descriptions of each."
+                    }
+                ]
+            },
+            {
+                "Other problems": [
+                    {
+                        "Class imbalances are not the only problem to contend with": "the distribution of the data within each class is also relevant (between-class versus within-class imbalance) [cites [17], [34]]"
+                    },
+                    "Summary of other potential factors in the data -- overlapping, small disjuncts, etc."
+                ]
+            },
+            {
+                "Conclusions": [
+                    "Often reported that cost-sensitive learning outperforms resampling methods",
+                    "But clever resampling and combination methods can do quite more than cost-sensitive learning, since they can provide new info or eliminate redundant info for the learning algo.",
+                    "Other data factors matter, but for larger datasets their effects are reduced, since the minority class is better represented."
+                ]
+            }
+        ]
+    }
+]
