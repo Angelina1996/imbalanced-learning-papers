@@ -41,9 +41,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-
-
-
 <script type="text/javascript">
 // 'Random' number generator
 var seed = 123;
@@ -66,8 +63,6 @@ $(function() {
     function processPaper(paper) {
 
         // Handle author
-
-
         var author = '';
         if (typeof paper.authors !== "undefined") {
             var author_names = paper.authors[0].split(" ")
@@ -96,7 +91,21 @@ $(function() {
         }
 
         // Append row
-        $('#papers-table tbody').append('<tr><td style="font-size: 120%;">' + paper.title + ' (' + author + ' ' + paper.year + ')</td><td>' + this_row_tags_html + '</td></tr>');
+        var row_html = '<tr>';
+        row_html += '<td style="font-size: 120%;">' + paper.title + ' (' + author + ' ' + paper.year + ')';
+        if (typeof paper.links !== "undefined") {
+            $.each(paper.links, function(i, link) {
+              row_html += ' <a target="_blank" href="' + link + '">[' + (i + 1) + ']</a>';
+            })
+        }
+        if (typeof paper.summary !== "undefined") {
+            var summary = JSON.stringify(paper.summary).replace(/\n/g, " ");
+            row_html += ' <a title="' + summary + '" href="#">[S]</a>';
+        }
+        row_html += '</td>';
+        row_html += '<td>' + this_row_tags_html + '</td>';
+        row_html += '</tr>';
+        $('#papers-table tbody').append(row_html);
 
     }
 
