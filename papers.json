@@ -19,7 +19,7 @@
         "title": "A Survey of Predictive Modelling under Imbalanced Distributions",
         "year": 2015,
         "authors": [
-            "Paula Branco1",
+            "Paula Branco",
             "Lúıs Torgo",
             "Rita P. Ribeiro"
         ],
@@ -46,9 +46,9 @@
         "title": "A systematic study of the class imbalance problem in convolutional neural networks",
         "year": 2017,
         "authors": [
-            "Mateusz Buda1",
+            "Mateusz Buda",
             "Atsuto Maki",
-            "Maciej A. Mazurowski1,"
+            "Maciej A. Mazurowski"
         ],
         "links": [
             "https://arxiv.org/pdf/1710.05381"
@@ -164,7 +164,7 @@
         "title": "Learning from imbalanced data: open challenges and future directions",
         "year": 2016,
         "authors": [
-            "Bartosz Krawczyk1"
+            "Bartosz Krawczyk"
         ],
         "tags": [
             "review"
