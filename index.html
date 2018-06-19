@@ -65,6 +65,19 @@ $(function() {
 
     function processPaper(paper) {
 
+        // Handle author
+
+
+        var author = '';
+        if (typeof paper.authors !== "undefined") {
+            var author_names = paper.authors[0].split(" ")
+            author = author_names[author_names.length - 1];
+            if (paper.authors.length > 1) {
+                author += ' et al.';
+            }
+        }
+
+        // Handle tags
         var this_row_tags_html = '';
         if (typeof paper.tags !== "undefined") {
 
@@ -83,7 +96,7 @@ $(function() {
         }
 
         // Append row
-        $('#papers-table tbody').append('<tr><td>' + paper.title + '</td><td>' + this_row_tags_html + '</td></tr>');
+        $('#papers-table tbody').append('<tr><td style="font-size: 120%;">' + paper.title + ' (' + author + ' ' + paper.year + ')</td><td>' + this_row_tags_html + '</td></tr>');
 
     }
 
@@ -123,6 +136,7 @@ $(function() {
     // Triggers
     $(document).on('click', '.tag', function(){
        $("#filter-input").val($(this).text()).trigger('keyup');
+       window.scrollTo(0, 0);
     });
 
     $(document).on('keyup', '#filter-input', function(){
