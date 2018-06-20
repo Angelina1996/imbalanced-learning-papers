@@ -130,15 +130,170 @@
         "year": 2011,
         "cited_by_count": 451,
         "authors": [
+            "Yanmin Sun",
             "Andrew Wong",
             "Mohamed S. Kamel"
         ],
         "tags": [
             "review",
-            "classification"
+            "classification",
+            "decision-trees",
+            "neural-networks",
+            "SVM",
+            "data-factors",
+            "resampling",
+            "cost-sensitive-learning",
+            "boosting",
+            "ensemble"
         ],
         "links": [
             "https://www.researchgate.net/profile/Andrew_Wong8/publication/263913891_Classification_of_imbalanced_data_a_review/links/550e28780cf212874167e2af/Classification-of-imbalanced-data-a-review.pdf?origin=publication_detail"
+        ],
+        "summary": [
+            {
+                "Abstract": [
+                    {
+                        "A review of imbalanced classification in terms of": [
+                             "application domains;",
+                             "nature of the problem;",
+                             "learning difficulties with standard classifier learning algorithms;",
+                             "learning objectives and evaluation measures; the reported research solutions;",
+                             "the class imbalance problem in the presence of multiple classes."
+                        ]
+                    }
+                ]
+            },
+            {
+                "Introduction": [
+                    "Prevalence and importance of imbalanced data.",
+                    "Informal characterization of the problem."
+                ]
+            },
+            {
+                "Examples of application domains": [
+                    "Fraud detection",
+                    "Medical diagnosis",
+                    "Network intrustion detection",
+                    "Oil spill detection",
+                    "Manufacturing",
+                    "Others"
+                ]
+            },
+            {
+                "Nature of the problem": [
+                    "Imbalanced class distribution is the main characteristic, but other factors are also a problem",
+                    "Small sample size",
+                    "Class separability",
+                    "Within-class concepts"
+                ]
+            },
+            {
+                "Difficulties with traditional classifiers": [
+                    {
+						"Decision trees": [
+							"In DTs, nodes represent attributes and edges represent possible values for a particular attribute.  Leaves are assigned with class labels.",
+							"Classifying examples is as simple as following paths from the root node through the tree to a leaf/class.",
+							"DT classifiers are modeled in two phases: tree building, and tree pruning.",
+							"Tree building involves recursively splitting the training data set based on a locally optimal criterion until all or most records belonging to each partition bear the same class label.",
+							"Pruning step follows to reduce overfitting and improve generalization, usually baed on classification error",
+							"With imbalanced data, DTs may need to create many tests/branches to distinguish small classes from large classes",
+							"In some learning procedures, such splitting actions may terminate before the branches necessary to detect small classes are reached",
+							"In others, such sub-trees may be pruned."
+						]
+					},
+                    {
+						"Feed-forward neural networks": [
+							"Empirical studies show that on imbalanced data:",
+							"Net error for samples in the prevalent class reduces rapidly in the first few iterations.",
+							"But net error for the small class increases considerably",
+							"Theoretical analysis shows that gradient vectors for the prevalent and minority classes typically differ both in direction and magnitude.  The prevalent class thus dominates the direction of descent."
+						]
+					},
+                    {
+						"Bayesian classification": [
+							"Based on inferences of probabilistic graphical models, which specify dependencies underlying a particular model with a graph structure.",
+							"The problem of learning a probabilistic model is to find a network that best matches the given training data set.",
+							"the networks are learned according to certain scoring functions to approximate those dependency patterns which dominate the data.",
+							"For imbalanced data, dependency patterns in the minority class(es) do not tend to be significant, and so it is hard to have these encoded in the network.",
+							"This leads to increased missclassification of the minority examples"
+							
+						]
+					},
+                    {
+						"SVMs": [
+							"Goal: to find optimal separating hyperplane with maximal margin.",
+							"Thus solution depends only on datapoints at the margin, known as support vectors.",
+							"SVMs thought to be less sensitive to imbalance, due to this aspect.",
+							"But, still has similar problems, since as the training data gets more imbalanced, the support vector ratio between the prevalent class and the small class also becomes more imbalanced.",
+							"Typically, an SVM will learn to always return the majority class."
+						]
+					},
+                    {
+						"Associative classifiers": [
+							"For imbalanced data, association patterns describing the small classes are unlikely to be found since the combination of items characterizing the small classes occur too seldom to pass certain significancance tests for detecting association patterns.",
+							"Consequently, classification rules obtained from the discovered association patterns for predicting the small classes are therefore rare and weak."
+						]
+					},
+                    {
+						"KNN": [
+							"In the presence of the imbalanced training data, samples of the small classes occur sparsely in the data space.",
+							"Given a test sample, the calculated k-nearest neighbors bear higher probabilities of samples from the prevalent classes.",
+							"Hence, test cases from the small classes are prone to being incorrectly classified."
+						]
+					}
+                ]
+            },
+            {
+                "Learning objectives and evaluation": [
+                    "Traditional methods use accuracy, but this is not appropriate for imbalanced data.",
+                    "Other measures (TP, TN, FP, FN, PP, NP) can be derived from the confusion matrix.",
+                    "F-measure",
+                    "G-mean",
+                    "ROC"
+                ]
+            },
+            {
+                "Research solutions": [
+                    {
+						"Data-level approaches": [
+							"Resampling inc. random over/under-sampling, informed resampling, synthetic resampling, and combinations.",
+							"Issue with deciding the optimal class distribution for any given dataset",
+							"Optimal class distributions vary by dataset, not necessarily true that perfect balance gives best results",
+							"Similarly, best method of resampling is not clear for any given dataset"
+						]
+					},
+                    {
+						"Algorithm-level approaches": [
+							"For imbalanced data, commonly involves choosing an appropriate inductive bias.",
+							"Various methods of choosing this for decision trees, SVM, association, etc.",
+							"One-class learning, caveats and benefits."
+						]
+					},
+                    {
+						"Cost-sensitive learning": [
+							"Basic idea and description.",
+							"Comes in three main types: weighting the data space; making the classifier/learning algo cost-sensitive; and using Bayes risk theory to assign each sample to its lowest risk class."
+						]
+					},
+                    {
+						"Boosting approaches": [
+							"Ensembles and AdaBoost",
+							"Cost-sensitive boosting",
+							"Other boosting approaches: SMOTEBoost, DataBoostIM, etc."
+						]
+					}
+                ]
+            },
+            {
+                "Multi-class imbalanced data": [
+                    ""
+                ]
+            },
+            {
+                "Conclusions and future research": [
+                    "Essentialy: promote more research efforts on the multiple class imbalance problem"
+                ]
+            }
         ]
     },
     {
