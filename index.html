@@ -41,8 +41,6 @@
 </div>
 </div>
 
-
-
 <div class="modal fade" id="summary-modal" tabindex="-1" role="dialog" aria-labelledby="summary-modalTitle" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -172,7 +170,7 @@ $(function() {
             url: 'papers.json',
             success: processPapers,
             error: function ajaxError(jqXHR, textStatus, errorThrown) {
-                console.error('Error getting food list: ', textStatus, ', Details: ', errorThrown);
+                console.error('Error getting paper list: ', textStatus, ', Details: ', errorThrown);
                 console.error('Response: ', jqXHR.responseText);
             }
         });
