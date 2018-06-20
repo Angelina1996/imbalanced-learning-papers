@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Imbalanced Learning Papers</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <style type="text/css">
         body { margin: 3em; }
         .tag { background-color: #eee; padding: 8px; border-radius: 3px; cursor: pointer; margin-right: 1em; line-height: 300%; white-space:nowrap; }
         td { vertical-align: middle !important; }
+        .paper-summary { display: none; }
     </style>
 </head>
 <body>
@@ -39,6 +41,27 @@
 </div>
 </div>
 
+
+
+<div class="modal fade" id="summary-modal" tabindex="-1" role="dialog" aria-labelledby="summary-modalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="summary-modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="summary-modal-body" class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 <script type="text/javascript">
@@ -47,6 +70,39 @@ var seed = 123;
 function random() {
     var x = Math.sin(seed++) * 10000;
     return x - Math.floor(x);
+}
+
+function obj2html(o) {
+
+    var html = '<ul>';
+
+    if (o instanceof Array) {
+
+        // List
+        $.each(o, function(i, element) {
+            html += obj2html(element);
+        });
+
+    } else if (typeof o === 'object' && o !== null && !(o instanceof Date)) {
+
+        // Dict
+        const keys = Object.keys(o);
+        $.each(keys, function(i, k) {
+            html += '<li>' + k + obj2html(o[k]) + '</li>'
+        });
+
+    } else if (typeof o === 'string') {
+
+        // String (leaf)
+        html += '<li>' + o + '</li>';
+
+    } else {
+        // Something else, ignore it
+    }
+
+    html += '</ul>';
+
+    return html;
 }
 
 $(function() {
@@ -92,15 +148,16 @@ $(function() {
 
         // Append row
         var row_html = '<tr>';
-        row_html += '<td style="font-size: 120%;">' + paper.title + ' (' + author + ' ' + paper.year + ')';
+        row_html += '<td><span class="paper-title" style="font-size: 120%;">' + paper.title + ' (' + author + ' ' + paper.year + ')</span><br />';
         if (typeof paper.links !== "undefined") {
             $.each(paper.links, function(i, link) {
-              row_html += ' <a target="_blank" href="' + link + '">[' + (i + 1) + ']</a>';
+              row_html += ' &nbsp; <a title="Go to paper" target="_blank" href="' + link + '"><i class="far fa-file"></i></a> &nbsp; ';
             })
         }
         if (typeof paper.summary !== "undefined") {
-            var summary = JSON.stringify(paper.summary).replace(/\n/g, " ");
-            row_html += ' <a title="' + summary + '" href="#">[S]</a>';
+            var summary = obj2html(paper.summary);
+            row_html += ' <a title="View paper summary" href="#" class="summary-modal-btn" data-toggle="modal" data-target="#summary-modal"><i class="fas fa-list-ul"></i></a>';
+            row_html += ' <div class="paper-summary">' + summary + '</div>';
         }
         row_html += '</td>';
         row_html += '<td>' + this_row_tags_html + '</td>';
@@ -143,12 +200,12 @@ $(function() {
     loadPapers();
 
     // Triggers
-    $(document).on('click', '.tag', function(){
+    $(document).on('click', '.tag', function() {
        $("#filter-input").val($(this).text()).trigger('keyup');
        window.scrollTo(0, 0);
     });
 
-    $(document).on('keyup', '#filter-input', function(){
+    $(document).on('keyup', '#filter-input', function() {
 
         var query = $(this).val().split(" ");
 
@@ -174,6 +231,11 @@ $(function() {
             return true;
         }).show();  // show the rows that match.
 
+    });
+
+    $(document).on('click', '.summary-modal-btn', function() {
+       $('#summary-modal-title').text($(this).parent().find('.paper-title').text());
+       $('#summary-modal-body').html($(this).parent().find('.paper-summary').html());
     });
 
 });
