@@ -339,10 +339,69 @@
             "Francisco Herrera"
         ],
         "tags": [
-            "review"
+            "review",
+            "classification",
+            "resampling",
+            "cost-sensitive-learning",
+            "ensembles",
+            "performance-metrics",
+            "data-factors",
+            "decision-trees"
         ],
         "links": [
             "https://pdfs.semanticscholar.org/ca9e/f070d2a424b344b814de1196520da2f34ad7.pdf"
+        ],
+        "summary": [
+            {
+                "Abstract": [
+                    "Review of imbalanced data in terms of characteristics of datasets, evaluating performance, and methods."
+                ]
+            },
+            {
+                "Introduction": [
+                    "Informal definition of problem; importance.",
+                    "Taxonomy of methods: data, algorithm, and cost-sensitive.",
+                    {
+                        "Six significant problems related to data intrinsic characteristics": [
+                            "The identification of areas with small disjuncts.",
+                            "The lack of density and information in the training data.",
+                            "The problem of overlapping between the classes.",
+                            "The impact of noisy data in imbalanced domains.",
+                            "The significance of the borderline instances to carry out a good discrimination between the positive and negative classes, and its relationship with noisy examples.",
+                            "The possible differences in the data distribution for the training and test data, also known as the dataset shift."
+                        ]
+                    }
+                ]
+            },
+            {
+                "Imblanced datasets in classification": [
+                    "Problem description, why traditional methods don't work.",
+                    "Evaluation metrics for ID: accuracy doesn't work, alternatives in TP, TN, FP, FN, AUC, GM, F, PPV, ROC."
+                ]
+            },
+            {
+                "Methods": [
+                    "Resampling: under/over-sampling, hybrid methods, SMOTE and variants, others.",
+                    "Cost-sensitive learning."
+                ]
+            },
+            {
+                "Analyzing behaviour of IL methods": [
+                    "A complete study on the suitability of some recent proposals for preprocessing, cost-sensitive learning and ensemble-based methods, carrying out an intra-family comparison for selecting the best performing approaches and then developing and inter-family analysis, with the aim of observing whether there are differences among them.",
+                    "Decision trees, SVMs, and KNN."
+                ]
+            },
+            {
+                "Problems related to data intrinsic characteristics": [
+                    "Skewed class distributions do not hinder the learning task by itself, but usually a series of difficulties related with this problem turn up",
+                    "Small disjuncts",
+                    "Lack of density",
+                    "Class separability",
+                    "Noisy data",
+                    "Borderline examples",
+                    "Dataset shift"
+                ]
+            }
         ]
     },
     {
