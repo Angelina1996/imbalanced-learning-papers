@@ -425,10 +425,74 @@
             "Bartosz Krawczyk"
         ],
         "tags": [
-            "review"
+            "review",
+            "classification",
+            "regression",
+            "multi-class",
+            "big-data"
         ],
         "links": [
             "https://link.springer.com/article/10.1007/s13748-016-0094-0"
+        ],
+        "summary": [
+            {
+                "Abstract": [
+                    "Discussion of open issues and challenges that need to be addressed to further develop the field of imbalanced learning",
+                    "covering the full spectrum of learning from imbalanced data: classification, regression, clustering, data streams, big data analytics and applications, e.g., in social media and computer vision.",
+                    "This paper provides a discussion and suggestions concerning lines of future research for each of them."
+                ]
+            },
+            {
+                "Introduction": [
+                    "Assumptions of traditional ML algorithms and why they are not appropriate for imbalanced data.",
+                    "This paper is not exhaustive, but about open challenges and future directions",
+                    "Seven vital areas are identified and open challenges in each of them are highlighted. These include classification of binary and multi-class problems, multi-label and multi-instance learning, semi-supervised and unsupervised handling of imbalanced datasets, performing regression on skewed examples, learning from imbalanced data streams in stationary and drifting environments, and finally large scale and big data cases."
+                ]
+            },
+            {
+                "Preliminaries": [
+                    "Taxonomy: data-level, algo-level, hybrid methods.",
+                    "Data-level methods: concentrate on modifying the training set to make it suitable for a standard learning algorithm.",
+                    "Algorithm-level methods: concentrate on modifying existing learners to alleviate their bias towards majority groups.",
+                    "Hybrid methods: concentrate on combining previously mentioned approaches to extract their strong points and reduce their weaknesses.",
+                    "Example applications."
+                ]
+            },
+            "Binary imbalanced classification",
+            "Multi-class imbalanced classification",
+            "Multi-label imbalanced classification",
+            {
+                "Regression in imbalanced scenarios": [
+                    "Yet to be explored from the imbalanced perspective",
+                    "Many important real-life applications like economy, crisis management, fault diagnosis, or meteorology require predicting rare and extreme values of continuous target variable.",
+                    "Main works done on this topic include proposal of evaluation metrics that take into account varying importance of observations [54] and adaptation of undersampling and SMOTE to continuous output prediction problems.",
+                    {
+						"Following open issues are crucial when developing novel methods for imbalanced regression": [
+							"Development of cost-sensitive regression solutions that are able to adapt the penalty to the degree of importance assigned to rare observations.",
+							"Methods that will allow to distinguish between minority and noisy samples must be proposed.",
+							"As in classification problems, ensemble learning may offer significant improvement in both robustness to skewed distributions and in predictive power."
+						]
+					}
+                ]
+            },
+            "Semi-supervised and unsupervised learning from imbalanced data",
+            "Learning from imbalanced data streams",
+            {
+                "Imbalanced big data": [
+                    "Modern systems generate massive amounts of information that forces us to develop computationally effective solutions for processing them.",
+                    "Not only the increasing data volume can become prohibitive for existing methods, but also the nature of problem can cause additional difficulties.",
+                    "Big imbalanced data can originate from various specific areas like social networks or computer vision that forces us to work with specific types of data like graphs, tensors or video sequences",
+                    "This requires not only scalable and efficient algorithms, but also methods for handling heterogeneous and atypical data.",
+                    {
+						"Following open issues must be analyzed in order to gain better understanding of how to tackle imbalanced big data": [
+							"SMOTE-based oversampling methods applied in distributed environments such as MapReduce tend to fail",
+							"When mining big data we are interested in value we can extract from this process. A promising direction lies in developing methods that by analyzing the nature of imbalance will allow us to gain a deeper understanding of given problem.",
+							"We must develop methods for processing and classifying big data in form of graphs, xml structures, video sequences, hyperspectral images, associations, tensors etc.",
+							"When dealing with imbalanced big data we face one of two possible scenarios: when majority class is massive and minority class is of a small sample size and when imbalance is present but representatives from both classes are abundant."
+						]
+					}
+                ]
+            }
         ]
     },
     {
