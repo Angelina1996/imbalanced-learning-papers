@@ -131,7 +131,9 @@ $(function() {
         if (typeof paper.tags !== "undefined") {
 
             // Sort tags by name
-            paper.tags.sort();
+            paper.tags.sort(function (a, b) {
+                return a.toLowerCase().localeCompare(b.toLowerCase());
+            });
 
             // Build tag HTML
             $.each(paper.tags, function(i, tag) {
@@ -189,7 +191,9 @@ $(function() {
         });
         // Tag bar
         var tags = Object.keys(all_tags);
-        tags.sort();
+        tags.sort(function (a, b) {
+            return a.toLowerCase().localeCompare(b.toLowerCase());
+        });
         $.each(tags, function(i, tag) {
             $('#tag-bar').append(tagHTML(tag, all_tags[tag].color) + '<br />');
         });
