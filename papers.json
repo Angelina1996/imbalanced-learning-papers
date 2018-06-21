@@ -699,7 +699,7 @@
             "ensembles",
             "synthetic-data",
             "SMOTE",
-            "svm"
+            "SVM"
         ],
         "links": [
             "https://www.semanticscholar.org/paper/Class-Imbalance%2C-Redux-Wallace-Small/a8ef5a810099178b70d1490a4e6fc4426b642cde"
