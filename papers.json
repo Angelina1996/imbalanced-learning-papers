@@ -24,10 +24,113 @@
             "Rita P. Ribeiro"
         ],
         "tags": [
-            "review"
+            "review",
+            "classification",
+            "regression",
+            "performance-metrics",
+            "data-factors",
+            "class-separation",
+            "small-disjuncts"
         ],
         "links": [
             "https://arxiv.org/pdf/1505.01658"
+        ],
+        "summary": [
+            {
+                "Abstract": [
+                    "A survey of imbalanced data techniques including those for classification *and* regression",
+                    "Discussion of the main challenges and approaches",
+                    "Provides a taxonomy for methods"
+                ]
+            },
+            {
+                "Introduction": [
+                    "Predictive modeling task, classification vs regression",
+                    "Informal description of imbalanced data and related issues"
+                ]
+            },
+            {
+                "Problem definition": [
+                    "Problem described in terms of the predictive modeling task",
+                    "Characterization in terms of user preferences and cardinality",
+                    "Problems with traditional metrics"
+                ]
+            },
+            {
+                "Performance metrics for imbalanced domains": [
+                    "Building a model as an optimization problem",
+                    "Inadequacy of standard evaluation criteria",
+                    "Adequate metrics should not only provide means to compare the models according to the user preferences, but can also be used to drive the learning of these models",
+                    {
+                        "Metrics for classification": [
+                             "Confusion matrix gives rise to simple metrics like TP, TN, FP, FN.",
+                             "Accuracy  can be defined in these terms",
+                             "Accuracy is typically not suitable for imbalanced tasks",
+                             "Metrics for imbalanced data should take user preferences into account",
+                             "But those above (TP, TN, etc.) exhibit a trade-off and it is impractical to simultaneously monitor multiple metrics",
+                             "Hence others like F-measure, G-mean, ROC are possible alternatives",
+                             "Use of ROC and AUC, necessity of AUC for single performance measure",
+                             "Precision-recall curves suggested for highly skewed domains, over ROC curves",
+                             "Additional proposals for metrics"
+                        ]
+                    },
+                    {
+                        "Metrics for regression": [
+                             "Very few efforts have been made regarding evaluation metrics for regression tasks in imbalanced domains",
+                             "MSE (or MAD) commonly used, but not generally appropriate",
+                             "Various proposals for assymetric loss functions",
+                             "Attempts made to generalize the ROC idea to regression; RROC, REC, RECS",
+                             "Utility based regression with precision-recall framework"
+                             
+                        ]
+                    }
+                ]
+            },
+            {
+                "Modeling strategies for imbalanced domains": [
+                    "Taxonomy of four main categories: data pre-processing; special purpose learning methods; prediction post-processing; hybrid methods.",
+                    {
+                        "Data pre-processing": [
+                             "Resampling, active learning, weighting the data space",
+							{
+								"Re-sampling": [
+									 "Generally aim: obtain a more balanced data distribution.",
+									 "Many proposed methods e.g. under/over-sampling, data lceaning, clustering, synthetic, combinations -- summaries of each",
+									 "But deciding which method to use and what target imbalance is best are not easy tasks",
+									 "For classification problems, changing the class distribution of the training data improves classifiers performance on an imbalanced context because it imposes non-uniform misclassification costs.",
+									 "Similar/adapted methods can be used for regression"
+								]
+							},
+							{
+								"Active learning": [
+									 "Summary of approaches"
+								]
+							},
+							{
+								"Weighting the data space": [
+									 "Another way of implementing cost-sensitive learning",
+									 "Misclassification costs are applied to the given data set with the goal of selecting the best training distribution",
+									 "Easy to apply",
+									 "Drawbacks include potential overfitting and the possible lack of cost values at processing time"
+								]
+							}, 
+							"Other/special purpose methods"
+                        ]
+                    },
+                    "Special-purpose Learning Methods",
+                    "Prediction Post-processing",
+                    "Hybrid Methods"
+                ]
+            },
+            {
+                "Related problems": [
+                    "Data factors",
+                    "Overlapping/class separation",
+                    "Small disjuncts",
+                    "Poor representation",
+                    "Noisy data"
+                ]
+            }
         ]
     },
     {
