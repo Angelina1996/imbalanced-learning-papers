@@ -465,7 +465,7 @@
             "classification",
             "resampling",
             "informed-resampling",
-            "smote",
+            "SMOTE",
             "adasyn",
             "kernel-based",
             "active-learning",
@@ -698,7 +698,7 @@
             "data-factors",
             "ensembles",
             "synthetic-data",
-            "smote",
+            "SMOTE",
             "svm"
         ],
         "links": [
@@ -811,7 +811,7 @@
                     {
                         "Oversampling": [
                             "Random replication of minority class examples.",
-                            "Authors suggest oversampling increases likelihood of overfitting [cites chawla2002smote and kubat1997addressing]",
+                            "Authors suggest oversampling increases likelihood of overfitting [cites chawla2002SMOTE and kubat1997addressing]",
                             "Problematic computational expense for already large datasets",
                             "Brief description of SMOTE process; how it avoids overfitting."
                         ]
